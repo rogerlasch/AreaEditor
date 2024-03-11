@@ -1,0 +1,3288 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\AreaEditor.ico"
+IDR_AREAEDTYPE          ICON    DISCARDABLE     "res\\AreaEditorDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_LIGHTBULB           BITMAP  DISCARDABLE     "res\\litebulb.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_AREA_ADD_ITEM
+    BUTTON      ID_AREA_DUPLICATE_ITEM
+    BUTTON      ID_AREA_DELETE_ITEM
+    SEPARATOR
+    BUTTON      ID_AREA_FIND
+    BUTTON      ID_AREA_FIND_NEXT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        POPUP "Open As..."
+        BEGIN
+            MENUITEM "ROM area...\tF12",            ID_FILE_IMPORT_ROM
+            MENUITEM "SMAUG area...\tF11",          ID_FILE_IMPORT_SMAUG
+        END
+        MENUITEM "Open Area &List...\tCtrl+L",  ID_FILE_OPENAREALIST
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...",             ID_FILE_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "G&enerate name...\tCtrl+E",   ID_EDIT_GENERATENAME
+        MENUITEM "&Reload names...",            ID_EDIT_RELOADNAMES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Skills"
+    BEGIN
+        MENUITEM "&Load skills...",             ID_SKILLS_LOAD
+        MENUITEM "&Save skills...",             ID_SKILLS_SAVE
+        MENUITEM "&Close skills",               ID_SKILLS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit skills...",             ID_SKILLS_EDIT
+    END
+    POPUP "&Commands"
+    BEGIN
+        MENUITEM "&Load commands...",           ID_COMMANDS_LOAD
+        MENUITEM "&Save commands...",           ID_COMMANDS_SAVE
+        MENUITEM "&Close commands",             ID_COMMANDS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit commands...",           ID_COMMANDS_EDIT
+    END
+    POPUP "S&ocials"
+    BEGIN
+        MENUITEM "&Load socials...",            ID_SOCIALS_LOAD
+        MENUITEM "&Save socials...",            ID_SOCIALS_SAVE
+        MENUITEM "&Close socials",              ID_SOCIALS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit socials...",            ID_SOCIALS_EDIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Tip of the day ...",         ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About Area Editor...",       ID_APP_ABOUT
+    END
+END
+
+IDR_AREAEDTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        POPUP "Open As..."
+        BEGIN
+            MENUITEM "ROM area...\tF12",            ID_FILE_IMPORT_ROM
+            MENUITEM "SMAUG area...\tF11",          ID_FILE_IMPORT_SMAUG
+        END
+        MENUITEM "Open Area &List...\tCtrl+L",  ID_FILE_OPENAREALIST
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        POPUP "Export"
+        BEGIN
+            MENUITEM "MUSHcode...",                 ID_FILE_EXPORT_MUSH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Area summary...\tCtrl+U",     ID_FILE_AREA_SUMMARY
+        MENUITEM "Pr&eferences...",             ID_FILE_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Ignore validation errors\tCtrl+I", 
+                                                ID_EDIT_IGNORE_VALIDATION_ERRORS
+
+        MENUITEM SEPARATOR
+        MENUITEM "G&enerate name...\tCtrl+E",   ID_EDIT_GENERATENAME
+        MENUITEM "&Go to Vnum...\tCtrl+G",      ID_EDIT_GOTOVNUM
+        MENUITEM "&Reload names...",            ID_EDIT_RELOADNAMES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Recent warnings...\tCtrl+R", ID_VIEW_WARNINGS
+        MENUITEM "Re&fresh\tF5",                ID_VIEW_REFRESH
+    END
+    POPUP "&Area"
+    BEGIN
+        MENUITEM "&Add item\tCtrl+A",           ID_AREA_ADD_ITEM
+        MENUITEM "&Duplicate item\tCtrl+D",     ID_AREA_DUPLICATE_ITEM
+        MENUITEM "&Remove item...\tDel",        ID_AREA_DELETE_ITEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_AREA_FIND
+        MENUITEM "Find &Next\tF3",              ID_AREA_FIND_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "&Check area...\tCtrl+K",      ID_AREA_CHECK
+        MENUITEM "Check all areas...\tShift+Ctrl+K", ID_AREA_CHECKALLAREAS
+        MENUITEM "Renu&mber...",                ID_AREA_RENUMBER
+        MENUITEM SEPARATOR
+        MENUITEM "Walkthrough\tCtrl+W",         ID_AREA_WALKTHROUGH
+    END
+    POPUP "&Skills"
+    BEGIN
+        MENUITEM "&Load Skills...",             ID_SKILLS_LOAD
+        MENUITEM "&Save Skills As...",          ID_SKILLS_SAVE
+        MENUITEM "&Close Skills",               ID_SKILLS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Skills...",             ID_SKILLS_EDIT
+    END
+    POPUP "&Commands"
+    BEGIN
+        MENUITEM "&Load Commands...",           ID_COMMANDS_LOAD
+        MENUITEM "&Save Commands As...",        ID_COMMANDS_SAVE
+        MENUITEM "&Close Commands",             ID_COMMANDS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Commands...",           ID_COMMANDS_EDIT
+    END
+    POPUP "S&ocials"
+    BEGIN
+        MENUITEM "&Load Socials...",            ID_SOCIALS_LOAD
+        MENUITEM "&Save Socials As...",         ID_SOCIALS_SAVE
+        MENUITEM "&Close Socials",              ID_SOCIALS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Socials...",            ID_SOCIALS_EDIT
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "Close A&ll",                  ID_WINDOW_CLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Tip of the day ...",         ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About Area Editor...",       ID_APP_ABOUT
+    END
+END
+
+IDR_NON_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Statusline"
+    BEGIN
+        MENUITEM "Modified",                    ID_STATUS_MODIFIED
+    END
+END
+
+CG_IDR_POPUP_AREA_EDITOR_VIEW MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Add item",                    ID_AREA_ADD_ITEM
+        MENUITEM "&Duplicate item",             ID_AREA_DUPLICATE_ITEM
+        MENUITEM "Remove item...",              ID_AREA_DELETE_ITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Find...",                     ID_AREA_FIND
+        MENUITEM "Find Next",                   ID_AREA_FIND_NEXT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_AREA_ADD_ITEM,       VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_AREA_DUPLICATE_ITEM, VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_EDIT_GENERATENAME,   VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_AREA_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTOVNUM,       VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_EDIT_IGNORE_VALIDATION_ERRORS, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    "K",            ID_AREA_CHECK,          VIRTKEY, CONTROL, NOINVERT
+    "K",            ID_AREA_CHECKALLAREAS,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "L",            ID_FILE_OPENAREALIST,   VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_VIEW_WARNINGS,       VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_FILE_AREA_SUMMARY,   VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_AREA_DELETE_ITEM,    VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F11,         ID_FILE_IMPORT_SMAUG,   VIRTKEY, NOINVERT
+    VK_F12,         ID_FILE_IMPORT_ROM,     VIRTKEY, NOINVERT
+    VK_F3,          ID_AREA_FIND_NEXT,      VIRTKEY, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "W",            ID_AREA_WALKTHROUGH,    VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,35,0
+ PRODUCTVERSION 1,0,35,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "SMAUG/ROM Area Editor - for use with area files for SMAUG or ROM MUD programs.\0"
+            VALUE "CompanyName", "Gammon Software Solutions\0"
+            VALUE "FileDescription", "Area Editor\0"
+            VALUE "FileVersion", "1.35\0"
+            VALUE "InternalName", "AreaEditor\0"
+            VALUE "LegalCopyright", "Copyright (C) 2006 Gammon Software Solutions\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "AreaEditor.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Area Editor Application\0"
+            VALUE "ProductVersion", "1.35\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 272, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About AreaEditor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,9,128,57,14,WS_GROUP
+    PUSHBUTTON      "&Credits",IDC_CREDITS,102,128,50,14
+    PUSHBUTTON      "&License",IDC_LICENSE,188,128,50,14
+    LTEXT           "Area Editor",IDC_STATIC,39,5,47,8
+    LTEXT           "Copyright © 2006 - Nick Gammon\nAll rights reserved worldwide by Nick Gammon.",
+                    IDC_STATIC,39,22,196,18
+    LTEXT           "Version (entered at runtime)",IDC_VERSION_LABEL,110,5,
+                    105,8
+    RTEXT           "Support:",IDC_STATIC,9,48,28,8
+    RTEXT           "Web:",IDC_STATIC,19,59,18,8
+    LTEXT           "Email address",IDC_EMAIL_ADDRESS,41,48,201,8
+    LTEXT           "Web address",IDC_WEB_ADDRESS,41,59,201,8
+    RTEXT           "Changes:",IDC_STATIC,5,70,31,8
+    LTEXT           "Area Editor change history",IDC_CHANGES_ADDRESS,41,70,
+                    201,8
+    LTEXT           "This software is provided ""as is"" without express or implied warranty, with no claim as to its suitability for any purpose, and subject to the License agreement below.",
+                    IDC_STATIC,7,89,247,31
+END
+
+IDD_AREA_NAME DIALOG DISCARDABLE  0, 0, 261, 226
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Area name:",IDC_STATIC,12,9,37,8
+    EDITTEXT        IDC_AREA_NAME,55,5,205,14,ES_AUTOHSCROLL
+    RTEXT           "Author:",IDC_STATIC,25,27,24,8
+    EDITTEXT        IDC_AUTHOR,55,24,205,14,ES_AUTOHSCROLL
+    RTEXT           "Message shown on reset:",IDC_STATIC,9,45,40,30
+    EDITTEXT        IDC_RESET_MESSAGE,55,43,205,35,ES_MULTILINE
+    LTEXT           "&Minutes before area repopulates (resets):",IDC_STATIC,
+                    5,90,129,8
+    EDITTEXT        IDC_RESET_FREQUENCY,141,85,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Area version:",IDC_STATIC,7,110,42,8
+    EDITTEXT        IDC_AREA_VERSION,55,105,32,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Version 1 is for SMAUG v 1.4",IDC_VERSION_LIT,99,110,93,
+                    8
+    LTEXT           "&Type:",IDC_STATIC,210,95,19,8
+    COMBOBOX        IDC_AREA_TYPE,210,105,45,105,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "File name:",IDC_STATIC,16,128,33,8
+    EDITTEXT        IDC_FILENAME,55,125,205,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Flags:",IDC_STATIC,29,146,20,8
+    EDITTEXT        IDC_FLAGS,55,144,205,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Ranges:",IDC_STATIC,21,166,28,8
+    EDITTEXT        IDC_RANGES,55,162,205,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Vnums:",IDC_STATIC,25,185,24,8
+    EDITTEXT        IDC_VNUMS,55,182,205,40,ES_MULTILINE | ES_READONLY
+END
+
+IDD_BLANK_ITEM DIALOG DISCARDABLE  0, 0, 197, 118
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You can add an item to this section of the area by choosing the menu item:\n\n   Area > Add\n\nor typing Ctrl+A",
+                    IDC_STATIC,10,10,175,55,WS_DISABLED
+    LTEXT           "If this section has a + sign before the name you can click on it to expand the view of that section.",
+                    IDC_STATIC,10,75,175,30,WS_DISABLED
+END
+
+IDD_MOBILE DIALOG DISCARDABLE  0, 0, 296, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_MOBILE_TABS,"SysTabControl32",TCS_MULTILINE,
+                    10,5,275,220
+END
+
+IDD_MOBILE_NAME DIALOG DISCARDABLE  0, 0, 281, 211
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Vnum:",IDC_STATIC,5,5,21,8
+    EDITTEXT        IDC_VNUM,35,1,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Level:",IDC_STATIC,80,5,20,8
+    EDITTEXT        IDC_LEVEL,105,1,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Sex:",IDC_STATIC,160,5,15,8
+    COMBOBOX        IDC_SEX,185,1,68,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Names:",IDC_STATIC,5,23,25,8
+    EDITTEXT        IDC_NAME,49,20,210,14,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_EDIT_NAMES,263,20,15,10
+    LTEXT           "&Short desc:",IDC_STATIC,5,38,37,8
+    EDITTEXT        IDC_SHORT_DESCRIPTION,49,35,210,14,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_EDIT_SHORT_DESCRIPTION,263,35,15,10
+    LTEXT           "&Long desc:",IDC_STATIC,5,53,36,8
+    EDITTEXT        IDC_LONG_DESCRIPTION,49,50,210,25,ES_MULTILINE | 
+                    ES_NOHIDESEL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "...",IDC_EDIT_LONG_DESCRIPTION,263,50,15,10
+    LTEXT           "&Description:",IDC_STATIC,5,69,38,8
+    EDITTEXT        IDC_DESCRIPTION,5,80,275,105,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT_DESCRIPTION,5,190,50,14
+    LTEXT           "Special function:",IDC_STATIC,80,190,54,8
+    COMBOBOX        IDC_SPEC_FUN,145,190,135,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MOBILE_SUMMARY DIALOG DISCARDABLE  0, 0, 288, 241
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Vnum:",IDC_STATIC,45,3,21,8
+    EDITTEXT        IDC_VNUM,71,0,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Name:",IDC_STATIC,44,18,22,8
+    EDITTEXT        IDC_NAME,71,15,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Short description:",IDC_STATIC,10,33,56,8
+    EDITTEXT        IDC_SHORT_DESCRIPTION,71,30,210,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Long description:",IDC_STATIC,11,48,55,8
+    EDITTEXT        IDC_LONG_DESCRIPTION,71,45,210,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    RTEXT           "Actions:",IDC_STATIC,40,63,26,8
+    EDITTEXT        IDC_ACTIONS,71,60,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Affected by:",IDC_STATIC,27,78,39,8
+    EDITTEXT        IDC_AFFECTEDBY,71,75,210,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Level:",IDC_STATIC,121,3,20,8
+    EDITTEXT        IDC_LEVEL,147,0,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Sex:",IDC_STATIC,185,3,15,8
+    EDITTEXT        IDC_SEX,211,0,70,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Stats:",IDC_STATIC,47,93,19,8
+    EDITTEXT        IDC_STATS,71,90,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Body parts:",IDC_STATIC,30,108,36,8
+    EDITTEXT        IDC_BODYPARTS,71,105,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Attacks:",IDC_STATIC,39,123,27,8
+    EDITTEXT        IDC_ATTACKS,71,120,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Defenses:",IDC_DEFENSES_LABEL,33,138,33,8
+    EDITTEXT        IDC_DEFENSES,71,135,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Resistant:",IDC_STATIC,34,153,32,8
+    EDITTEXT        IDC_RESISTANT,71,150,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Immune:",IDC_STATIC,38,168,28,8
+    EDITTEXT        IDC_IMMUNE,71,165,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Susceptible:",IDC_STATIC,26,183,40,8
+    EDITTEXT        IDC_SUSCEPTIBLE,71,180,210,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Average:",IDC_STATIC,39,198,30,8
+    EDITTEXT        IDC_AVERAGE,71,195,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Speaks:",IDC_SPEAKS_LABEL,39,213,27,8
+    EDITTEXT        IDC_SPEAKS,71,210,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Speaking",IDC_SPEAKING_LABEL,35,228,31,8
+    EDITTEXT        IDC_SPEAKING,71,225,210,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_MOBILE_STATS DIALOG DISCARDABLE  0, 0, 278, 209
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Strength:",IDC_STATIC,12,4,30,8
+    EDITTEXT        IDC_STR,45,0,35,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Intelligence:",IDC_STATIC,3,19,39,8
+    EDITTEXT        IDC_INT,45,15,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Wisdom:",IDC_STATIC,14,34,28,8
+    EDITTEXT        IDC_WIS,45,30,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Dexterity:",IDC_STATIC,12,49,30,8
+    EDITTEXT        IDC_DEX,45,45,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Constitution:",IDC_STATIC,2,64,40,8
+    EDITTEXT        IDC_CON,45,60,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Charisma:",IDC_STATIC,10,79,32,8
+    EDITTEXT        IDC_CHA,45,75,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Luck:",IDC_STATIC,23,94,19,8
+    EDITTEXT        IDC_LCK,45,90,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Alignment:",IDC_STATIC,8,109,34,8
+    EDITTEXT        IDC_ALIGNMENT,45,105,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Mobthac0:",IDC_STATIC,7,123,35,8
+    EDITTEXT        IDC_MOBTHAC0,45,120,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Gold:",IDC_STATIC,24,138,18,8
+    EDITTEXT        IDC_GOLD,45,135,35,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "AC:",IDC_AC_LABEL,0,154,42,8
+    EDITTEXT        IDC_AC,45,150,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Exp:",IDC_EXP_LABEL,0,169,42,8
+    EDITTEXT        IDC_EXP,45,165,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Height:",IDC_HEIGHT_LABEL,0,184,42,8
+    EDITTEXT        IDC_HEIGHT,45,180,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Weight:",IDC_WEIGHT_LABEL,0,199,42,8
+    EDITTEXT        IDC_WEIGHT,45,195,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Hit:",IDC_STATIC,92,4,12,8
+    EDITTEXT        IDC_HITNODICE,110,0,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "d",IDC_STATIC,133,5,8,8
+    EDITTEXT        IDC_HITSIZEDICE,141,0,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "+",IDC_STATIC,163,5,8,8
+    EDITTEXT        IDC_HITPLUS,172,0,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Hitroll:",IDC_STATIC,220,4,20,8
+    EDITTEXT        IDC_HITROLL,245,0,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Dam:",IDC_STATIC,86,19,18,8
+    EDITTEXT        IDC_DAMNODICE,110,15,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "d",IDC_STATIC,133,20,8,8
+    EDITTEXT        IDC_DAMSIZEDICE,141,15,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "+",IDC_STATIC,163,20,8,8
+    EDITTEXT        IDC_DAMPLUS,172,15,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Damroll:",IDC_STATIC,214,19,26,8
+    EDITTEXT        IDC_DAMROLL,245,15,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Mana:",IDC_STATIC,83,34,21,8
+    EDITTEXT        IDC_MANANODICE,110,30,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "d",IDC_STATIC,133,36,8,8
+    EDITTEXT        IDC_MANASIZEDICE,141,30,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "+",IDC_STATIC,163,36,8,8
+    EDITTEXT        IDC_MANAPLUS,172,30,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Num. attacks:",IDC_STATIC,195,34,45,8
+    EDITTEXT        IDC_NUMATTACKS,245,30,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Damage type:",IDC_DAMAGE_TYPE_LABEL,210,50,45,8
+    COMBOBOX        IDC_DAMAGE_TYPE,210,60,68,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Saving throws",IDC_STATIC,95,47,110,88
+    LTEXT           "Poison death:",IDC_STATIC,100,63,44,8
+    EDITTEXT        IDC_SAVING_POISON_DEATH,160,57,35,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Wand:",IDC_STATIC,100,76,22,8
+    EDITTEXT        IDC_SAVING_WAND,160,72,35,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Para petri:",IDC_STATIC,100,92,33,8
+    EDITTEXT        IDC_SAVING_PARA_PETRI,160,87,35,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Breath:",IDC_STATIC,100,108,24,8
+    EDITTEXT        IDC_SAVING_BREATH,160,102,35,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Spell staff:",IDC_STATIC,100,122,34,8
+    EDITTEXT        IDC_SAVING_SPELL_STAFF,160,117,35,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    RTEXT           "Size:",IDC_STATIC,112,141,16,8
+    COMBOBOX        IDC_MOBSIZE,135,137,68,105,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Race:",IDC_STATIC,108,154,20,8
+    COMBOBOX        IDC_RACE,135,151,68,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Class:",IDC_STATIC,108,168,20,8
+    COMBOBOX        IDC_CLASS,135,165,68,89,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Position:",IDC_STATIC,100,182,28,8
+    COMBOBOX        IDC_POSITION,135,179,68,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Defposition:",IDC_STATIC,90,196,38,8
+    COMBOBOX        IDC_DEFPOSITION,135,193,68,89,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Suggest...",IDC_STATIC,215,155,55,50
+    PUSHBUTTON      "Hit dice",IDC_SUGGEST_HIT,225,165,35,14
+    PUSHBUTTON      "AC",IDC_SUGGEST_AC,225,185,35,14
+END
+
+IDD_MUD_PROGRAM DIALOG DISCARDABLE  0, 0, 272, 246
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Program &Type:",IDC_STATIC,10,10,47,8
+    COMBOBOX        IDC_PROGRAM_TYPE,65,5,75,180,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Arguments:",IDC_STATIC,10,25,36,8
+    EDITTEXT        IDC_ARGLIST,65,20,200,14,ES_AUTOHSCROLL
+    LTEXT           "MUD &Commands:",IDC_STATIC,10,40,56,8
+    PUSHBUTTON      "Edit&...",IDC_EDIT_PROGRAM,215,40,50,14
+    EDITTEXT        IDC_COMLIST,10,55,255,185,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_OBJECT_AFFECT DIALOG DISCARDABLE  0, 0, 257, 228
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Location:",IDC_STATIC,14,16,30,8
+    COMBOBOX        IDC_LOCATION,50,13,68,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "by",IDC_STATIC,123,16,8,8
+    EDITTEXT        IDC_MODIFIER,136,11,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "&Where:",IDC_WHERE_LABEL,20,40,24,8
+    COMBOBOX        IDC_AFFECT_TYPE,50,35,68,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Flag1",IDC_FLAG1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,69,115,10
+    CONTROL         "Flag2",IDC_FLAG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,79,115,10
+    CONTROL         "Flag3",IDC_FLAG3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,90,115,10
+    CONTROL         "Flag4",IDC_FLAG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,99,115,10
+    CONTROL         "Flag5",IDC_FLAG5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,109,115,10
+    CONTROL         "Flag6",IDC_FLAG6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,119,115,10
+    CONTROL         "Flag7",IDC_FLAG7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,130,115,10
+    CONTROL         "Flag8",IDC_FLAG8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,139,115,10
+    CONTROL         "Flag9",IDC_FLAG9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,149,115,10
+    CONTROL         "Flag10",IDC_FLAG10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,159,115,10
+    CONTROL         "Flag11",IDC_FLAG11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,170,115,10
+    CONTROL         "Flag12",IDC_FLAG12,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,179,115,10
+    CONTROL         "Flag13",IDC_FLAG13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,189,115,10
+    CONTROL         "Flag14",IDC_FLAG14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,199,115,10
+    CONTROL         "Flag15",IDC_FLAG15,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,210,115,10
+    CONTROL         "Flag16",IDC_FLAG16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,219,115,10
+    CONTROL         "Flag17",IDC_FLAG17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,69,115,10
+    CONTROL         "Flag18",IDC_FLAG18,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,79,115,10
+    CONTROL         "Flag19",IDC_FLAG19,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,90,115,10
+    CONTROL         "Flag20",IDC_FLAG20,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,99,115,10
+    CONTROL         "Flag21",IDC_FLAG21,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,109,115,10
+    CONTROL         "Flag22",IDC_FLAG22,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,119,115,10
+    CONTROL         "Flag23",IDC_FLAG23,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,130,115,10
+    CONTROL         "Flag24",IDC_FLAG24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,139,115,10
+    CONTROL         "Flag25",IDC_FLAG25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,149,115,10
+    CONTROL         "Flag26",IDC_FLAG26,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,159,115,10
+    CONTROL         "Flag27",IDC_FLAG27,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,170,115,10
+    CONTROL         "Flag28",IDC_FLAG28,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,179,115,10
+    CONTROL         "Flag29",IDC_FLAG29,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,189,115,10
+    CONTROL         "Flag30",IDC_FLAG30,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,199,115,10
+    CONTROL         "Flag31",IDC_FLAG31,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,210,115,10
+    CONTROL         "Flag32",IDC_FLAG32,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,219,115,10
+    LTEXT           "Affect what:",IDC_WHAT_LABEL,5,55,39,8
+END
+
+IDD_OBJECT_EXTRA_DESCRIPTION DIALOG DISCARDABLE  0, 0, 292, 161
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Names (keywords):",IDC_STATIC,5,10,61,8
+    EDITTEXT        IDC_NAME,71,5,210,14,ES_AUTOHSCROLL
+    LTEXT           "&Description:",IDC_STATIC,5,25,38,8
+    EDITTEXT        IDC_DESCRIPTION,5,36,280,105,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT_DESCRIPTION,5,145,50,14
+END
+
+IDD_OBJECT DIALOG DISCARDABLE  0, 0, 296, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_OBJECT_TABS,"SysTabControl32",TCS_MULTILINE,
+                    10,5,275,220
+END
+
+IDD_OBJECT_NAME DIALOG DISCARDABLE  0, 0, 281, 206
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Vnum:",IDC_STATIC,5,5,21,8
+    EDITTEXT        IDC_VNUM,71,0,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Type:",IDC_STATIC,145,5,19,8
+    COMBOBOX        IDC_LOCATION,170,2,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Name:",IDC_STATIC,5,25,22,8
+    EDITTEXT        IDC_NAME,51,20,210,14,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_EDIT_NAMES,265,20,15,10
+    LTEXT           "&Short desc:",IDC_STATIC,5,40,37,8
+    EDITTEXT        IDC_SHORT_DESCRIPTION,51,35,210,14,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_EDIT_SHORT_DESCRIPTION,265,35,15,10
+    LTEXT           "&Long desc:",IDC_STATIC,5,55,36,8
+    EDITTEXT        IDC_LONG_DESCRIPTION,51,50,210,25,ES_MULTILINE | 
+                    ES_NOHIDESEL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "...",IDC_EDIT_LONG_DESCRIPTION,265,50,15,10
+    LTEXT           "&Action desc:",IDC_STATIC,5,69,40,8
+    EDITTEXT        IDC_DESCRIPTION,5,80,275,105,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT_DESCRIPTION,5,190,50,14
+END
+
+IDD_OBJECT_SUMMARY DIALOG DISCARDABLE  0, 0, 288, 221
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Vnum:",IDC_STATIC,44,3,21,8
+    EDITTEXT        IDC_VNUM,74,0,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Type:",IDC_STATIC,126,3,19,8
+    EDITTEXT        IDC_TYPE,156,0,129,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Name:",IDC_STATIC,43,19,22,8
+    EDITTEXT        IDC_NAME,74,15,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Short description:",IDC_STATIC,9,34,56,8
+    EDITTEXT        IDC_SHORT_DESCRIPTION,74,30,210,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Long description:",IDC_STATIC,10,49,55,8
+    EDITTEXT        IDC_LONG_DESCRIPTION,74,45,210,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    RTEXT           "Extra flags:",IDC_STATIC,29,65,36,8
+    EDITTEXT        IDC_EXTRA_FLAGS,74,60,210,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Wear flags:",IDC_STATIC,28,80,37,8
+    EDITTEXT        IDC_WEAR_FLAGS,74,75,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Weight:",IDC_STATIC,39,94,26,8
+    EDITTEXT        IDC_WEIGHT,74,90,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Cost:",IDC_STATIC,48,109,17,8
+    EDITTEXT        IDC_COST,74,105,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Values:",IDC_STATIC,41,124,24,8
+    EDITTEXT        IDC_VALUE1,74,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_VALUE2,109,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_VALUE3,144,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_VALUE4,179,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_VALUE5,214,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_VALUE6,249,120,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Value meanings:",IDC_STATIC,12,138,53,8
+    EDITTEXT        IDC_VALUE_MEANINGS,74,135,210,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Layers:",IDC_STATIC,41,154,24,8
+    EDITTEXT        IDC_LAYERS,74,150,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Rent:",IDC_STATIC,151,154,18,8
+    EDITTEXT        IDC_RENT,179,150,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Level:",IDC_LEVEL_LABEL,45,168,20,8
+    EDITTEXT        IDC_LEVEL,74,165,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Condition:",IDC_CONDITION_LABEL,137,168,32,8
+    EDITTEXT        IDC_CONDITION,179,165,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    RTEXT           "Affects:",IDC_STATIC,40,185,25,8
+    EDITTEXT        IDC_AFFECTS,74,180,205,35,ES_MULTILINE | ES_READONLY
+END
+
+IDD_OBJECT_STATS DIALOG DISCARDABLE  0, 0, 286, 231
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Weight:",IDC_STATIC,5,24,60,8
+    EDITTEXT        IDC_WEIGHT,75,20,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Co&st:",IDC_STATIC,215,24,17,8
+    EDITTEXT        IDC_COST,235,20,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "Values",IDC_STATIC,0,40,280,130
+    RTEXT           "Value1:",IDC_LABEL_VALUE1,5,55,60,8
+    EDITTEXT        IDC_VALUE1,75,50,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE1,110,50,35,14
+    EDITTEXT        IDC_DESC_VALUE1,150,52,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Value2:",IDC_LABEL_VALUE2,5,75,60,8
+    EDITTEXT        IDC_VALUE2,75,70,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE2,110,70,35,14
+    EDITTEXT        IDC_DESC_VALUE2,150,72,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Value3:",IDC_LABEL_VALUE3,5,95,60,8
+    EDITTEXT        IDC_VALUE3,75,90,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE3,110,90,35,14
+    EDITTEXT        IDC_DESC_VALUE3,150,92,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Value4:",IDC_LABEL_VALUE4,5,115,60,8
+    EDITTEXT        IDC_VALUE4,75,110,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE4,110,110,35,14
+    EDITTEXT        IDC_DESC_VALUE4,150,112,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Value5:",IDC_LABEL_VALUE5,5,135,60,8
+    EDITTEXT        IDC_VALUE5,75,130,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE5,110,130,35,14
+    EDITTEXT        IDC_DESC_VALUE5,150,132,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Value6:",IDC_LABEL_VALUE6,5,155,60,8
+    EDITTEXT        IDC_VALUE6,75,150,30,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE6,110,150,35,14
+    EDITTEXT        IDC_DESC_VALUE6,150,152,125,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "&Layers:",IDC_STATIC,5,176,60,8
+    EDITTEXT        IDC_LAYERS,75,173,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Rent:",IDC_STATIC,115,176,60,8
+    EDITTEXT        IDC_RENT,185,173,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Le&vel:",IDC_LEVEL_LABEL,5,196,60,8
+    EDITTEXT        IDC_LEVEL,75,193,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Condition:",IDC_CONDITION_LABEL,115,196,60,8
+    EDITTEXT        IDC_CONDITION,185,193,30,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Material:",IDC_MATERIAL_LABEL,5,216,60,8
+    EDITTEXT        IDC_MATERIAL,75,213,140,14,ES_AUTOHSCROLL
+    LTEXT           "Type:",IDC_STATIC,46,5,19,8
+    EDITTEXT        IDC_TYPE,75,5,194,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "units",IDC_WEIGHT_UNITS,110,24,90,8
+END
+
+IDD_ROOM DIALOG DISCARDABLE  0, 0, 296, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_OBJECT_TABS,"SysTabControl32",TCS_MULTILINE,
+                    10,5,275,220
+END
+
+IDD_ROOM_EXIT_DETAILS DIALOG DISCARDABLE  0, 0, 306, 241
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "D&escription:",IDC_STATIC,5,8,38,8
+    EDITTEXT        IDC_DESCRIPTION,50,5,250,55,ES_MULTILINE | WS_VSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT,50,65,50,14
+    RTEXT           "&Keyword:",IDC_STATIC,13,90,30,8
+    EDITTEXT        IDC_KEYWORD,50,85,250,14,ES_AUTOHSCROLL
+    RTEXT           "&Direction:",IDC_STATIC,12,108,31,8
+    COMBOBOX        IDC_DIRECTION,50,105,105,105,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Exit &To:",IDC_STATIC,18,130,25,8
+    EDITTEXT        IDC_EXIT_TO,50,125,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXIT_TO_DESCRIPTION,96,127,205,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose Exit...",IDC_CHOOSE,50,145,50,14
+    PUSHBUTTON      "Go to Exit",IDC_GOTO,120,145,50,14
+    LTEXT           "(Enter -1 for no exit.)",IDC_STATIC,188,148,64,8
+    RTEXT           "Key:",IDC_STATIC,28,168,15,8
+    EDITTEXT        IDC_KEY,50,165,40,14,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_KEY_DESCRIPTION,95,167,205,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose Key...",IDC_CHOOSE_KEY,50,185,50,14
+    PUSHBUTTON      "Go to Key",IDC_GOTO_KEY,120,185,50,14
+    LTEXT           "(Enter -1 for no key.)",IDC_STATIC,188,189,65,8
+    LTEXT           "Distance:",IDC_STATIC,12,210,31,8
+    EDITTEXT        IDC_DISTANCE,50,205,40,14,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    RTEXT           "Flags:",IDC_STATIC,23,226,20,8
+    EDITTEXT        IDC_FLAGS,50,225,210,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_OBJECT_ROOM_MAP DIALOG DISCARDABLE  0, 0, 141, 91
+STYLE WS_CHILD | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Vnum:",IDC_STATIC,20,10,21,8
+    EDITTEXT        IDC_VNUM,50,5,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&X:",IDC_STATIC,20,30,8,8
+    EDITTEXT        IDC_X,50,25,55,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "&Y:",IDC_STATIC,20,50,8,8
+    EDITTEXT        IDC_Y,50,45,55,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "&Entry",IDC_STATIC,20,70,17,8
+    EDITTEXT        IDC_ENTRY,50,65,20,14,ES_AUTOHSCROLL
+END
+
+IDD_ROOM_NAME DIALOG DISCARDABLE  0, 0, 298, 251
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Vnum:",IDC_STATIC,5,5,21,8
+    EDITTEXT        IDC_VNUM,55,0,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Type:",IDC_STATIC,129,5,19,8
+    COMBOBOX        IDC_SECTOR_TYPE,154,2,110,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Name:",IDC_STATIC,5,25,22,8
+    EDITTEXT        IDC_NAME,55,20,215,14,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_EDIT_NAMES,275,20,15,10
+    LTEXT           "T&eleport vnum:",IDC_STATIC,5,45,48,8
+    EDITTEXT        IDC_TELE_VNUM,55,40,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_DESC_TELEPORT,100,42,175,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_TELEPORT_CHOOSE,55,60,37,14
+    PUSHBUTTON      "Go to",IDC_TELEPORT_GOTO,105,60,37,14
+    LTEXT           "Te&leport delay:",IDC_STATIC,150,65,48,8
+    EDITTEXT        IDC_TELE_DELAY,200,60,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Description",IDC_STATIC,5,80,36,8
+    EDITTEXT        IDC_DESCRIPTION,5,90,285,115,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT_DESCRIPTION,5,210,50,14
+    LTEXT           "&Max. in room:",IDC_TUNNEL_LABEL,200,215,43,8
+    EDITTEXT        IDC_TUNNEL,249,210,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Clan room for:",IDC_CLAN_NAME_LABEL,5,235,44,8
+    EDITTEXT        IDC_CLAN_NAME,60,230,50,14,ES_AUTOHSCROLL
+    LTEXT           "Heal rate:",IDC_HEAL_RATE_LABEL,120,235,32,8
+    EDITTEXT        IDC_HEAL_RATE,160,230,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Mana rate:",IDC_MANA_RATE_LABEL,210,235,35,8
+    EDITTEXT        IDC_MANA_RATE,250,230,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+END
+
+IDD_ROOM_SUMMARY DIALOG DISCARDABLE  0, 0, 288, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Vnum:",IDC_STATIC,46,1,21,8
+    EDITTEXT        IDC_VNUM,75,0,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Type:",IDC_STATIC,126,0,19,8
+    EDITTEXT        IDC_TYPE,156,0,129,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Name:",IDC_STATIC,45,21,22,8
+    EDITTEXT        IDC_NAME,75,15,210,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Flags:",IDC_STATIC,47,36,20,8
+    EDITTEXT        IDC_FLAGS,75,30,210,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "&Entered from:",IDC_STATIC,10,55,43,8
+    LISTBOX         IDC_ENTRANCES,10,65,220,50,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Go to",IDC_GOTO_ENTRANCE,234,65,51,14
+    PUSHBUTTON      "Add exit...",IDC_ADD_EXIT,234,100,51,14
+    LTEXT           "&References:",IDC_STATIC,10,120,40,8
+    LISTBOX         IDC_OBJECTS,10,130,220,100,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Go to",IDC_GOTO_OBJECT,234,130,51,14
+    PUSHBUTTON      "Add mob...",IDC_ADD_MOB,234,147,51,14
+    PUSHBUTTON      "Add object...",IDC_ADD_OBJECT,234,164,51,14
+    PUSHBUTTON      "Remove...",IDC_REMOVE,234,181,51,14
+    PUSHBUTTON      "Equip...",IDC_EQUIP,234,198,51,14
+    PUSHBUTTON      "Give...",IDC_GIVE,234,215,51,14
+END
+
+IDD_RESETS DIALOG DISCARDABLE  0, 0, 290, 207
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Mobile",IDC_MOBILE_BUTTON,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,10,37,10
+    CONTROL         "&Object",IDC_OBJECT_BUTTON,"Button",BS_AUTORADIOBUTTON,
+                    67,10,37,10
+    CONTROL         "&Give",IDC_GIVE_BUTTON,"Button",BS_AUTORADIOBUTTON,119,
+                    10,31,10
+    CONTROL         "&Equip",IDC_EQUIP_BUTTON,"Button",BS_AUTORADIOBUTTON,
+                    165,10,34,10
+    CONTROL         "&Put",IDC_PUT_BUTTON,"Button",BS_AUTORADIOBUTTON,15,20,
+                    27,10
+    CONTROL         "&Door",IDC_DOOR_BUTTON,"Button",BS_AUTORADIOBUTTON,67,
+                    20,31,10
+    CONTROL         "&Rand",IDC_RAND_BUTTON,"Button",BS_AUTORADIOBUTTON,119,
+                    20,33,10
+    CONTROL         "&Trap",IDC_TRAP_BUTTON,"Button",BS_AUTORADIOBUTTON,165,
+                    20,31,10
+    CONTROL         "&Hide",IDC_HIDE_BUTTON,"Button",BS_AUTORADIOBUTTON,205,
+                    20,31,10
+    RTEXT           "Arg1:",IDC_LABEL_ARG1,10,39,35,8
+    EDITTEXT        IDC_ARG1,50,35,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESC_ARG1,95,37,175,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_ARG1_CHOOSE,95,52,37,14
+    PUSHBUTTON      "Go to",IDC_ARG1_GOTO,140,52,37,14
+    RTEXT           "Arg2:",IDC_LABEL_ARG2,10,74,35,8
+    EDITTEXT        IDC_ARG2,50,69,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESC_ARG2,95,70,175,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_ARG2_CHOOSE,95,88,37,14
+    PUSHBUTTON      "Go to",IDC_ARG2_GOTO,140,88,37,14
+    RTEXT           "Arg3:",IDC_LABEL_ARG3,10,112,35,8
+    EDITTEXT        IDC_ARG3,50,108,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESC_ARG3,95,110,175,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_ARG3_CHOOSE,95,126,37,14
+    PUSHBUTTON      "Go to",IDC_ARG3_GOTO,140,126,37,14
+    RTEXT           "Extra:",IDC_LABEL_EXTRA,10,150,35,8
+    EDITTEXT        IDC_EXTRA,50,146,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESC_EXTRA,95,149,175,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "Arg4:",IDC_LABEL_ARG4,10,174,35,8
+    EDITTEXT        IDC_ARG4,50,170,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESC_ARG4,95,172,175,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    RTEXT           "&Location:",IDC_WEAR_LOCATION_LABEL,15,193,30,8
+    COMBOBOX        IDC_WEAR_LOCATION,50,190,130,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+ID_PROBLEMS_LOADING_AREA DIALOG DISCARDABLE  0, 0, 442, 233
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Problems in area"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ERROR_LIST,5,20,335,160,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_WELCOME DIALOG DISCARDABLE  34, 22, 306, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Welcome to Area Editor!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,5,20,20
+    DEFPUSHBUTTON   "OK",IDOK,9,143,42,14,WS_GROUP
+    CTEXT           "Welcome to Area Editor!",IDC_STATIC,86,15,133,8
+    LTEXT           "I notice that this is the first time you have used Area Editor Version %% on this PC.",
+                    IDC_MESSAGE,10,35,280,15
+    LTEXT           "You can obtain help on how to use the various parts of the program at any time by pressing the F1 key, or clicking on the ""Help"" button in the various dialog boxes.",
+                    IDC_STATIC,10,50,285,20
+    LTEXT           "This screen will not appear again.",IDC_STATIC,9,89,130,
+                    8
+    LTEXT           "- Nick Gammon",IDC_STATIC,239,149,55,8
+    LTEXT           "Changes in this version:",IDC_STATIC,9,72,76,8
+    LTEXT           "Area Editor change history",IDC_CHANGES_ADDRESS,89,72,
+                    189,12
+    PUSHBUTTON      "&License",IDC_LICENSE,122,143,50,14
+    LTEXT           "This software is provided ""as is"" without express or implied warranty, with no claim as to its suitability for any purpose, and subject to the License agreement below.",
+                    IDC_STATIC,9,110,284,23
+END
+
+IDD_WELCOME1 DIALOG DISCARDABLE  34, 22, 306, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Thanks for upgrading Area Editor!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,5,20,20
+    DEFPUSHBUTTON   "OK",IDOK,10,138,42,14,WS_GROUP
+    CTEXT           "Welcome to Area Editor, version %%",IDC_MESSAGE1,86,15,
+                    133,8
+    LTEXT           "Thank you for upgrading Area Editor to version %%",
+                    IDC_MESSAGE2,10,35,280,15
+    LTEXT           "This version has various bug fixes and enhancements. You can find what these are by using Help > Index, select the Index tab, and search for ""Recent Changes"", or clicking on the link below.",
+                    IDC_STATIC,10,50,285,25
+    LTEXT           "This screen will not appear again.",IDC_STATIC,10,94,
+                    130,8
+    LTEXT           "- Nick Gammon",IDC_STATIC,239,143,55,8
+    LTEXT           "Changes in this version:",IDC_STATIC,10,80,76,8
+    LTEXT           "Area Editor change history",IDC_CHANGES_ADDRESS,90,80,
+                    189,12
+    PUSHBUTTON      "&License",IDC_LICENSE,120,138,50,14
+    LTEXT           "This software is provided ""as is"" without express or implied warranty, with no claim as to its suitability for any purpose, and subject to the License agreement below.",
+                    IDC_STATIC,9,110,284,23
+END
+
+IDD_TIP DIALOG DISCARDABLE  0, 0, 231, 164
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the Day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,12,11,207,123
+    LTEXT           "Some String",IDC_TIPSTRING,28,63,177,60
+    CONTROL         "&Show Tips on StartUp",IDC_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,85,10
+    PUSHBUTTON      "&Next Tip",IDC_NEXTTIP,109,143,50,14,WS_GROUP
+    DEFPUSHBUTTON   "&Close",IDOK,168,143,50,14,WS_GROUP
+    CONTROL         "",IDC_BULB,"Static",SS_BITMAP,20,17,190,111
+END
+
+IDD_SHOP DIALOG DISCARDABLE  0, 0, 260, 227
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Keeper:",IDC_STATIC,15,10,26,8
+    EDITTEXT        IDC_KEEPER,55,5,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_KEEPER_DESCRIPTION,100,7,160,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_CHOOSE,100,25,37,14
+    PUSHBUTTON      "&Go to keeper",IDC_GOTO,146,25,54,14
+    LTEXT           "Buy &types:",IDC_STATIC,15,40,34,8
+    COMBOBOX        IDC_BUY_TYPE1,15,55,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BUY_TYPE2,15,70,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BUY_TYPE3,15,85,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BUY_TYPE4,15,100,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BUY_TYPE5,15,115,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Open hour:",IDC_STATIC,140,60,36,8
+    EDITTEXT        IDC_OPEN_HOUR,180,55,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Close hour:",IDC_STATIC,140,80,36,8
+    EDITTEXT        IDC_CLOSE_HOUR,180,75,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Profit &buy:",IDC_STATIC,140,100,32,8
+    EDITTEXT        IDC_PROFIT_BUY,180,95,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,225,100,8,8
+    LTEXT           "Profit &sell:",IDC_STATIC,140,120,31,8
+    EDITTEXT        IDC_PROFIT_SELL,180,115,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,225,120,8,8
+    LTEXT           "Selling the following items:",IDC_STATIC,15,130,83,8
+    LISTBOX         IDC_SELLING,15,140,150,85,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Profit is a percentage of the item cost divided by 10.",
+                    IDC_STATIC,180,135,70,25
+    PUSHBUTTON      "&Add item...",IDC_ADD_ITEM,180,170,65,14
+    PUSHBUTTON      "&Remove item...",IDC_REMOVE_ITEM,180,190,65,14
+    PUSHBUTTON      "Go to &item reset",IDC_GOTO_OBJECT,180,210,65,14
+END
+
+IDD_REPAIR DIALOG DISCARDABLE  0, 0, 272, 182
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Keeper:",IDC_STATIC,15,10,26,8
+    EDITTEXT        IDC_KEEPER,55,5,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_KEEPER_DESCRIPTION,100,7,160,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Choose ...",IDC_CHOOSE,100,25,37,14
+    PUSHBUTTON      "Go to keeper",IDC_GOTO,146,25,54,14
+    LTEXT           "&Fix types:",IDC_STATIC,15,50,30,8
+    COMBOBOX        IDC_FIX_TYPE1,55,45,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FIX_TYPE2,55,60,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FIX_TYPE3,55,75,110,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Profit fix:",IDC_STATIC,15,100,28,8
+    EDITTEXT        IDC_PROFIT_FIX,55,95,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Shop &Type:",IDC_STATIC,15,120,38,8
+    COMBOBOX        IDC_REPAIR_TYPE,55,115,110,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Open hour:",IDC_STATIC,15,140,36,8
+    EDITTEXT        IDC_OPEN_HOUR,55,135,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Close hour:",IDC_STATIC,15,160,36,8
+    EDITTEXT        IDC_CLOSE_HOUR,55,154,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "% of cost / 10",IDC_STATIC,100,100,45,8
+END
+
+IDD_HELP DIALOG DISCARDABLE  0, 0, 306, 231
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Level:",IDC_STATIC,16,10,20,8
+    EDITTEXT        IDC_LEVEL,45,5,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Keywords:",IDC_STATIC,2,30,34,8
+    EDITTEXT        IDC_KEYWORDS,45,25,220,14,ES_AUTOHSCROLL
+    LTEXT           "&Text:",IDC_STATIC,19,45,17,8
+    EDITTEXT        IDC_TEXT,5,60,295,145,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Edit&...",IDC_EDIT_HELP,5,210,50,14
+END
+
+IDD_CHOOSE_MOB DIALOG DISCARDABLE  0, 0, 247, 221
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose mobile"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Area:",IDC_STATIC,5,5,18,8
+    COMBOBOX        IDC_AREA,25,3,215,127,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_MOB_LIST,5,20,235,125,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DESCRIPTION,5,150,235,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_SUMMARY,5,165,235,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATS,5,180,235,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,200,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,200,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,200,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,200,50,14
+END
+
+IDD_CHOOSE_ROOM DIALOG DISCARDABLE  0, 0, 247, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose room"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Area:",IDC_STATIC,5,5,18,8
+    COMBOBOX        IDC_AREA,25,3,215,127,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_ROOM_LIST,5,20,235,150,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FLAGS,5,175,235,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,196,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,196,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,196,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,196,50,14
+END
+
+IDD_CHOOSE_OBJECT DIALOG DISCARDABLE  0, 0, 247, 241
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose object"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Area:",IDC_STATIC,5,5,18,8
+    COMBOBOX        IDC_AREA,25,3,215,127,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Conditions text",IDC_CONDITIONS,5,20,235,8
+    LISTBOX         IDC_OBJECT_LIST,5,30,235,125,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Choose objects of &Type:",IDC_STATIC,50,160,78,8
+    COMBOBOX        IDC_OBJECT_TYPE,130,157,110,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DESCRIPTION,5,175,235,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATS,5,190,235,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_VALUES,5,205,235,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,223,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,223,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,223,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,223,50,14
+END
+
+IDD_CHOOSE_EXIT DIALOG DISCARDABLE  0, 0, 247, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose exit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_EXIT_LIST,5,5,235,150,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,165,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,165,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,165,50,14
+END
+
+IDD_DOCUMENT_INFO DIALOG DISCARDABLE  0, 0, 317, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Area file summary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,250,120,50,14
+    LTEXT           "Helps:",IDC_STATIC,5,10,21,8
+    EDITTEXT        IDC_HELPS,65,5,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Mobiles:",IDC_STATIC,5,30,27,8
+    EDITTEXT        IDC_MOBILES,65,25,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Programs:",IDC_STATIC,215,30,32,8
+    EDITTEXT        IDC_MOBILE_PROGRAMS,255,25,45,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Objects:",IDC_STATIC,5,50,27,8
+    EDITTEXT        IDC_OBJECTS,65,45,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Affects:",IDC_STATIC,120,50,25,8
+    EDITTEXT        IDC_OBJECT_AFFECTS,160,45,45,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Programs:",IDC_STATIC,215,50,32,8
+    EDITTEXT        IDC_OBJECT_PROGRAMS,255,45,45,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Resets:",IDC_STATIC,5,70,25,8
+    EDITTEXT        IDC_RESETS,65,65,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Rooms:",IDC_STATIC,5,90,25,8
+    EDITTEXT        IDC_ROOMS,65,86,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Exits:",IDC_STATIC,120,90,18,8
+    EDITTEXT        IDC_ROOM_EXITS,160,86,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Programs:",IDC_STATIC,215,90,32,8
+    EDITTEXT        IDC_ROOM_PROGRAMS,255,86,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Shops:",IDC_STATIC,5,110,23,8
+    EDITTEXT        IDC_SHOPS,65,105,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Repairs:",IDC_STATIC,5,130,27,8
+    EDITTEXT        IDC_REPAIRS,65,125,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_ADD_TO_OBJECT DIALOG DISCARDABLE  0, 0, 157, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add what?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Affect",IDC_ADD_BUTTONS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,10,35,10
+    CONTROL         "&Description",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,
+                    20,51,10
+    CONTROL         "&Program",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,30,
+                    42,10
+    DEFPUSHBUTTON   "OK",IDOK,95,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,27,50,14
+END
+
+IDD_ADD_TO_ROOM DIALOG DISCARDABLE  0, 0, 157, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add what?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Description",IDC_ADD_BUTTONS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,10,51,10
+    CONTROL         "&Exit",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,20,27,
+                    10
+    CONTROL         "&Map",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,30,30,
+                    10
+    CONTROL         "&Program",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,40,
+                    42,10
+    DEFPUSHBUTTON   "OK",IDOK,95,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,27,50,14
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 262, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",-1,5,10,34,8
+    COMBOBOX        IDC_FIND_TEXT,45,5,205,75,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Match &case",IDC_MATCH_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,45,25,53,10
+    CONTROL         "&All areas",IDC_ALL_AREAS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,208,25,43,10
+    CONTROL         "&Summary",IDC_FIND_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,45,40,45,10
+    CONTROL         "&Detail",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,105,40,34,10
+    CONTROL         "&Program",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,155,40,42,10
+    CONTROL         "&Vnum",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,210,40,34,10
+    DEFPUSHBUTTON   "&Find",IDOK,45,60,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,200,60,50,14
+END
+
+IDD_EDIT DIALOG DISCARDABLE  0, 0, 292, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_COLUMN_COUNT,5,0,280,20,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_TEXT,5,20,280,150,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,5,180,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,180,50,14
+    PUSHBUTTON      "&Wrap to edge",IDC_WRAP,225,180,60,14
+    PUSHBUTTON      "&Spell check",IDC_SPELL_CHECK,155,180,50,14,NOT 
+                    WS_VISIBLE
+END
+
+IDD_MOBILE_RESETS DIALOG DISCARDABLE  0, 0, 288, 220
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "This mob is referred to in the following places:",
+                    IDC_STATIC,5,0,144,8
+    LISTBOX         IDC_LOADED,5,10,245,205,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Go to",IDC_GOTO_RESET,255,10,25,14
+END
+
+IDD_OBJECT_RESETS DIALOG DISCARDABLE  0, 0, 288, 221
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LOADED,10,10,245,205,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Go to",IDC_GOTO_RESET,260,10,25,14
+    LTEXT           "This object is referred to in the following places:",
+                    IDC_STATIC,10,0,150,8
+END
+
+IDD_CHOOSE_SPELL DIALOG DISCARDABLE  0, 0, 247, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose spell"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_SPELL_LIST,5,5,235,150,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,165,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,165,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,165,50,14
+END
+
+IDD_SKILLS_LIST DIALOG DISCARDABLE  0, 0, 312, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Skills list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_SKILLS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,5,235,150
+    PUSHBUTTON      "&Add...",IDC_ADD,250,5,50,14
+    PUSHBUTTON      "&Edit...",IDC_EDIT,250,25,50,14
+    PUSHBUTTON      "&Delete...",IDC_DELETE,250,50,50,14
+    PUSHBUTTON      "Close",IDCANCEL,250,140,50,14
+    LTEXT           "Static",IDC_SKILL_COUNT,5,160,235,8
+END
+
+IDD_SKILLSPAGE1 DIALOG DISCARDABLE  0, 0, 277, 231
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Name:",IDC_STATIC,25,9,22,8
+    EDITTEXT        IDC_NAME,55,5,175,14,ES_AUTOHSCROLL
+    RTEXT           "&Function:",IDC_STATIC,17,24,30,8
+    COMBOBOX        IDC_FUNCTION,55,20,175,175,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,28,39,19,8
+    COMBOBOX        IDC_TYPE,55,35,175,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Slot:",IDC_STATIC,32,54,15,8
+    EDITTEXT        IDC_SLOT,55,50,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Target:",IDC_STATIC,23,69,24,8
+    EDITTEXT        IDC_TARGET,55,65,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Range:",IDC_STATIC,155,68,24,8
+    EDITTEXT        IDC_RANGE,187,65,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Min. position:",IDC_STATIC,5,84,42,8
+    EDITTEXT        IDC_MINIMUM_POSITION,55,80,45,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Info",IDC_STATIC,166,84,13,8
+    EDITTEXT        IDC_INFO,187,80,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Min mana:",IDC_STATIC,13,99,34,8
+    EDITTEXT        IDC_MIN_MANA,55,95,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Beats:",IDC_STATIC,26,114,21,8
+    EDITTEXT        IDC_BEATS,55,110,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Guild:",IDC_STATIC,28,129,19,8
+    EDITTEXT        IDC_GUILD,55,125,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Min. level:",IDC_STATIC,14,144,33,8
+    EDITTEXT        IDC_MIN_LEVEL,55,140,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Damage:",IDC_STATIC,17,159,30,8
+    COMBOBOX        IDC_DAMAGE,55,155,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Action:",IDC_STATIC,24,174,23,8
+    COMBOBOX        IDC_ACTION,55,170,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Class:",IDC_STATIC,27,188,20,8
+    COMBOBOX        IDC_CLASS,55,185,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Power:",IDC_STATIC,24,204,23,8
+    COMBOBOX        IDC_POWER,55,200,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Flags:",IDC_STATIC,27,218,20,8
+    EDITTEXT        IDC_FLAGS_SUMMARY,55,215,185,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_SKILLSPAGE2 DIALOG DISCARDABLE  0, 0, 277, 231
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Messages"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Damage:",IDC_STATIC,20,7,30,8
+    EDITTEXT        IDC_DAMAGE,60,3,210,14,ES_AUTOHSCROLL
+    RTEXT           "Wear off:",IDC_STATIC,20,22,30,8
+    EDITTEXT        IDC_WEAR_OFF,60,18,210,14,ES_AUTOHSCROLL
+    RTEXT           "Hit char:",IDC_STATIC,22,37,28,8
+    EDITTEXT        IDC_HIT_CHAR,60,33,210,14,ES_AUTOHSCROLL
+    RTEXT           "Hit vict:",IDC_STATIC,25,52,25,8
+    EDITTEXT        IDC_HIT_VICT,60,48,210,14,ES_AUTOHSCROLL
+    RTEXT           "Hit room:",IDC_STATIC,21,67,29,8
+    EDITTEXT        IDC_HIT_ROOM,60,63,210,14,ES_AUTOHSCROLL
+    RTEXT           "Miss char:",IDC_STATIC,17,97,33,8
+    EDITTEXT        IDC_MISS_CHAR,60,93,210,14,ES_AUTOHSCROLL
+    RTEXT           "Miss vict:",IDC_STATIC,20,112,30,8
+    EDITTEXT        IDC_MISS_VICT,60,108,210,14,ES_AUTOHSCROLL
+    RTEXT           "Miss room:",IDC_STATIC,16,127,34,8
+    EDITTEXT        IDC_MISS_ROOM,60,123,210,14,ES_AUTOHSCROLL
+    RTEXT           "Die char:",IDC_STATIC,20,142,30,8
+    EDITTEXT        IDC_DIE_CHAR,60,138,210,14,ES_AUTOHSCROLL
+    RTEXT           "Die vict:",IDC_STATIC,23,157,27,8
+    EDITTEXT        IDC_DIE_VICT,60,153,210,14,ES_AUTOHSCROLL
+    RTEXT           "Die room:",IDC_STATIC,19,172,31,8
+    EDITTEXT        IDC_DIE_ROOM,60,168,210,14,ES_AUTOHSCROLL
+    RTEXT           "Immune char:",IDC_STATIC,6,187,44,8
+    EDITTEXT        IDC_IMM_CHAR,60,183,210,14,ES_AUTOHSCROLL
+    RTEXT           "Immune vict:",IDC_STATIC,9,202,41,8
+    EDITTEXT        IDC_IMM_VICT,60,198,210,14,ES_AUTOHSCROLL
+    RTEXT           "Immune room:",IDC_STATIC,5,217,45,8
+    EDITTEXT        IDC_IMM_ROOM,60,213,210,14,ES_AUTOHSCROLL
+    RTEXT           "Hit dest:",IDC_STATIC,23,82,27,8
+    EDITTEXT        IDC_HIT_DEST,60,78,210,14,ES_AUTOHSCROLL
+END
+
+IDD_SKILLSPAGE3 DIALOG DISCARDABLE  0, 0, 277, 231
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Stats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Dice:",IDC_STATIC,29,7,18,8
+    EDITTEXT        IDC_DICE,55,3,155,14,ES_AUTOHSCROLL
+    RTEXT           "&Value:",IDC_STATIC,26,21,21,8
+    EDITTEXT        IDC_VALUE,55,18,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Saves:",IDC_STATIC,24,37,23,8
+    EDITTEXT        IDC_SAVES,55,33,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "D&ifficulty:",IDC_STATIC,17,52,30,8
+    EDITTEXT        IDC_DIFFICULTY,55,48,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "&Participants:",IDC_STATIC,7,66,40,8
+    EDITTEXT        IDC_PARTICIPANTS,55,63,45,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Affects:",IDC_STATIC,5,88,25,8
+    CONTROL         "List1",IDC_AFFECTS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,103,220,125
+    PUSHBUTTON      "Add...",IDC_ADD,230,103,40,14
+    PUSHBUTTON      "Edit...",IDC_EDIT,230,128,40,14
+    PUSHBUTTON      "Delete...",IDC_DELETE,230,153,40,14
+END
+
+IDD_SKILLSPAGE4 DIALOG DISCARDABLE  0, 0, 252, 231
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Flags"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Water",IDC_WATER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,5,35,10
+    CONTROL         "Earth",IDC_EARTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,15,33,10
+    CONTROL         "Air",IDC_AIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    25,24,10
+    CONTROL         "Astral",IDC_ASTRAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,35,33,10
+    CONTROL         "Area - is an area spell",IDC_AREA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,45,83,10
+    CONTROL         "Distant - affects something far away",IDC_DISTANT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,55,128,10
+    CONTROL         "Reverse",IDC_REVERSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,65,43,10
+    CONTROL         "Save for half damage",IDC_SAVE_HALF_DAMAGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,75,83,10
+    CONTROL         "Save negates affect",IDC_SAVE_NEGATES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,85,80,10
+    CONTROL         "Accumulative",IDC_ACCUMULATIVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,95,59,10
+    CONTROL         "Recastable - can be refreshed",IDC_RECASTABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,105,111,10
+    CONTROL         "No scribe - cannot be scribed",IDC_NOSCRIBE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,115,109,10
+    CONTROL         "No brew - cannot be brewed",IDC_NOBREW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,125,106,10
+    CONTROL         "Group spell - only affects group members",
+                    IDC_GROUPSPELL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    135,143,10
+    CONTROL         "Object - directed at an object",IDC_OBJECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,145,107,10
+    CONTROL         "Character - directed at a character",IDC_CHARACTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,155,124,10
+    CONTROL         "Secret skill - hidden unless learned",IDC_SECRETSKILL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,165,125,10
+    CONTROL         "PK sensitive - much harder for player vs. player",
+                    IDC_PKSENSITIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    175,163,10
+    CONTROL         "Stops spell on first failure",IDC_STOPONFAIL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,185,93,10
+END
+
+IDD_COMMANDS_LIST DIALOG DISCARDABLE  0, 0, 312, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Commands list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_COMMANDS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,5,235,150
+    PUSHBUTTON      "&Add...",IDC_ADD,250,5,50,14
+    PUSHBUTTON      "&Edit...",IDC_EDIT,250,25,50,14
+    PUSHBUTTON      "&Delete...",IDC_DELETE,250,50,50,14
+    PUSHBUTTON      "Close",IDCANCEL,250,140,50,14
+    LTEXT           "Static",IDC_COMMAND_COUNT,5,160,235,8
+END
+
+IDD_EDIT_COMMAND DIALOG DISCARDABLE  0, 0, 232, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit command"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_STATIC,5,10,22,8
+    EDITTEXT        IDC_NAME,50,5,170,14,ES_AUTOHSCROLL
+    LTEXT           "&Function:",IDC_STATIC,5,30,30,8
+    COMBOBOX        IDC_FUNCTION,50,25,165,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Position:",IDC_STATIC,5,50,28,8
+    EDITTEXT        IDC_POSITION,50,45,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Level:",IDC_STATIC,5,70,20,8
+    EDITTEXT        IDC_LEVEL,50,65,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Log:",IDC_STATIC,5,90,15,8
+    EDITTEXT        IDC_LOG,50,85,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Possessed",IDC_POSSESSED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,125,60,50,10
+    CONTROL         "Polymorphed",IDC_POLYMORPHED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,125,75,57,10
+    CONTROL         "Watch",IDC_WATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,90,37,10
+    DEFPUSHBUTTON   "OK",IDOK,50,110,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,110,50,14
+END
+
+IDD_SOCIALS_LIST DIALOG DISCARDABLE  0, 0, 312, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Socials list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_SOCIALS_LIST,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,5,235,150
+    PUSHBUTTON      "&Add...",IDC_ADD,250,5,50,14
+    PUSHBUTTON      "&Edit...",IDC_EDIT,250,25,50,14
+    PUSHBUTTON      "&Delete...",IDC_DELETE,250,50,50,14
+    PUSHBUTTON      "Close",IDCANCEL,250,140,50,14
+    LTEXT           "Static",IDC_SOCIALS_COUNT,5,160,235,8
+END
+
+IDD_EDIT_SOCIAL DIALOG DISCARDABLE  0, 0, 332, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit social"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Name:",IDC_STATIC,31,9,22,8
+    EDITTEXT        IDC_NAME,60,5,170,14,ES_AUTOHSCROLL
+    RTEXT           "Char no-arg:",IDC_STATIC,13,29,40,8
+    EDITTEXT        IDC_CHAR_NO_ARG,60,25,265,14,ES_AUTOHSCROLL
+    RTEXT           "Others no-arg:",IDC_STATIC,8,45,46,8
+    EDITTEXT        IDC_OTHERS_NO_ARG,60,42,265,14,ES_AUTOHSCROLL
+    RTEXT           "Char found:",IDC_STATIC,15,63,38,8
+    EDITTEXT        IDC_CHAR_FOUND,60,59,265,14,ES_AUTOHSCROLL
+    RTEXT           "Others found:",IDC_STATIC,9,80,44,8
+    EDITTEXT        IDC_OTHERS_FOUND,60,76,265,14,ES_AUTOHSCROLL
+    RTEXT           "Vict found:",IDC_STATIC,18,97,35,8
+    EDITTEXT        IDC_VICT_FOUND,60,93,265,14,ES_AUTOHSCROLL
+    RTEXT           "Char auto:",IDC_STATIC,19,115,34,8
+    EDITTEXT        IDC_CHAR_AUTO,60,110,265,14,ES_AUTOHSCROLL
+    RTEXT           "Others auto:",IDC_STATIC,13,130,40,8
+    EDITTEXT        IDC_OTHERS_AUTO,60,127,265,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,60,150,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,150,50,14
+END
+
+IDD_DELETE_REFERENCES DIALOG DISCARDABLE  0, 0, 287, 242
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete referencing items?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The following items which refer to the one you are about to delete will also be automatically deleted.\n\nDe-select any you wish to be retained, then click OK to proceed with the delete.\n\nClick CANCEL to avoid deleting anything.",
+                    IDC_STATIC,5,17,265,50
+    LISTBOX         IDC_XREF_LIST,5,70,270,145,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,5,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,220,50,14
+    PUSHBUTTON      "Select &All",IDC_SELECT_ALL,165,220,50,14
+    PUSHBUTTON      "&Deselect All",IDC_DESELECT_ALL,228,220,50,14
+    LTEXT           "About to delete:",IDC_STATIC,5,3,51,8
+    LTEXT           "What it is I am deleting ...",IDC_ABOUT_TO_DELETE,60,3,
+                    215,8
+END
+
+IDD_RENUMBER DIALOG DISCARDABLE  0, 0, 337, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Renumber area"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Mobiles",IDC_STATIC,5,5,320,50
+    LTEXT           "Low vnum:",IDC_STATIC,29,20,36,8
+    EDITTEXT        IDC_MOB_LOW_VNUM,70,15,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "High vnum:",IDC_STATIC,135,20,37,8
+    EDITTEXT        IDC_MOB_HIGH_VNUM,180,15,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Count:",IDC_STATIC,235,20,22,8
+    EDITTEXT        IDC_MOB_COUNT,265,15,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "New low vnum:",IDC_STATIC,15,40,50,8
+    EDITTEXT        IDC_NEW_LOW_MOB_VNUM,70,35,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "New high vnum:",IDC_STATIC,120,40,52,8
+    EDITTEXT        IDC_NEW_HIGH_MOB_VNUM,180,35,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Compact",IDC_MOB_COMPACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,265,40,44,10
+    GROUPBOX        "Rooms",IDC_STATIC,5,60,320,50
+    LTEXT           "Low vnum:",IDC_STATIC,29,76,36,8
+    EDITTEXT        IDC_ROOM_LOW_VNUM,70,70,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "High vnum:",IDC_STATIC,135,76,37,8
+    EDITTEXT        IDC_ROOM_HIGH_VNUM,180,70,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Count:",IDC_STATIC,235,76,22,8
+    EDITTEXT        IDC_ROOM_COUNT,265,70,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "New low vnum:",IDC_STATIC,15,95,50,8
+    EDITTEXT        IDC_NEW_LOW_ROOM_VNUM,70,90,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "New high vnum:",IDC_STATIC,121,95,52,8
+    EDITTEXT        IDC_NEW_HIGH_ROOM_VNUM,180,90,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Compact",IDC_ROOM_COMPACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,265,95,44,10
+    GROUPBOX        "Objects",IDC_STATIC,5,115,320,50
+    LTEXT           "Low vnum:",IDC_STATIC,29,131,36,8
+    EDITTEXT        IDC_OBJECT_LOW_VNUM,70,125,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "High vnum:",IDC_STATIC,135,131,37,8
+    EDITTEXT        IDC_OBJECT_HIGH_VNUM,180,125,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Count:",IDC_STATIC,235,131,22,8
+    EDITTEXT        IDC_OBJECT_COUNT,265,125,40,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "New low vnum:",IDC_STATIC,15,150,50,8
+    EDITTEXT        IDC_NEW_LOW_OBJECT_VNUM,70,145,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "New high vnum:",IDC_STATIC,121,150,52,8
+    EDITTEXT        IDC_NEW_HIGH_OBJECT_VNUM,180,145,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Compact",IDC_OBJECT_COMPACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,265,150,44,10
+    DEFPUSHBUTTON   "OK",IDOK,10,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,175,50,14
+END
+
+IDD_WEAR_FLAGS DIALOG DISCARDABLE  0, 0, 242, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Equip at what location?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Object:",IDC_STATIC,21,8,24,8
+    EDITTEXT        IDC_OBJECT,50,5,185,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    RTEXT           "Wear flags:",IDC_STATIC,8,25,37,8
+    EDITTEXT        IDC_WEAR_FLAGS,50,22,185,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    RTEXT           "&Location:",IDC_WEAR_LOCATION_LABEL,15,42,30,8
+    COMBOBOX        IDC_WEAR_LOCATION,50,39,130,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,115,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,60,50,14
+END
+
+IDD_PREFSP1 DIALOG DISCARDABLE  0, 0, 342, 87
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Commands:",IDC_STATIC,11,10,38,8
+    EDITTEXT        IDC_COMMANDS_FILE,58,5,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_COMMANDS,286,5,44,14
+    RTEXT           "&Skills:",IDC_STATIC,30,31,19,8
+    EDITTEXT        IDC_SKILLS_FILE,58,25,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_SKILLS,286,25,44,14
+    RTEXT           "S&ocials:",IDC_STATIC,23,50,26,8
+    EDITTEXT        IDC_SOCIALS_FILE,58,45,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_SOCIALS,286,45,44,14
+    RTEXT           "Configuration:",IDC_STATIC,5,71,44,8
+    EDITTEXT        IDC_CONFIG_FILE,58,65,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_CONFIG,286,65,44,14
+END
+
+IDD_PREFSP2 DIALOG DISCARDABLE  0, 0, 342, 106
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Show warnings on area load",IDC_SHOW_WARNINGS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,5,105,10
+    CONTROL         "&Warn on vnums out of range during area check",
+                    IDC_WARN_VNUMS_OUT_OF_RANGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,15,165,10
+    CONTROL         "Show &flag numbers",IDC_SHOW_FLAG_NUMBERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,25,76,10
+    CONTROL         "Save &Programs in ROM areas",IDC_SAVE_PROGRAMS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,35,109,10
+    GROUPBOX        "Fixed-space font for editing descriptions",IDC_STATIC,5,
+                    50,180,50
+    PUSHBUTTON      "&Choose font...",IDC_FONT,15,65,60,14
+    LTEXT           "Font name",IDC_FONT_NAME,15,85,155,8
+    LTEXT           "Default area &type to open:",IDC_STATIC,205,15,83,8
+    COMBOBOX        IDC_AREA_TYPE,205,25,80,105,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PREFSP3 DIALOG DISCARDABLE  0, 0, 342, 106
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Printing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Font...",IDC_FONT,10,10,50,14
+    LTEXT           "&Top margin:",IDC_STATIC,10,65,38,8
+    EDITTEXT        IDC_TOP_MARGIN,50,60,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_TOP_MARGIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,80,60,11,14
+    LTEXT           "&Left margin:",IDC_STATIC,10,89,38,8
+    EDITTEXT        IDC_LEFT_MARGIN,50,85,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_LEFT_MARGIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,80,85,11,14
+    LTEXT           "Font name",IDC_FONT_NAME,10,35,240,8
+    EDITTEXT        IDC_LINES_PER_PAGE,135,85,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_LINES_PER_PAGE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,165,85,11,14
+    LTEXT           "mm.",IDC_STATIC,95,65,14,8
+    LTEXT           "mm.",IDC_STATIC,95,90,14,8
+    LTEXT           "&Lines per page:",IDC_STATIC,125,65,50,8
+    CONTROL         "Print to disk file",IDC_PRINT_TO_FILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,200,65,63,10
+    CONTROL         "Show program contents",IDC_SHOW_PROGRAMS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,200,80,91,10
+END
+
+IDD_GENERAL_FLAGS DIALOG DISCARDABLE  0, 0, 256, 166
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Flag1",IDC_FLAG1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,5,115,10
+    CONTROL         "Flag2",IDC_FLAG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,15,115,10
+    CONTROL         "Flag3",IDC_FLAG3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,25,115,10
+    CONTROL         "Flag4",IDC_FLAG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,35,115,10
+    CONTROL         "Flag5",IDC_FLAG5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,45,115,10
+    CONTROL         "Flag6",IDC_FLAG6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,55,115,10
+    CONTROL         "Flag7",IDC_FLAG7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,65,115,10
+    CONTROL         "Flag8",IDC_FLAG8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,75,115,10
+    CONTROL         "Flag9",IDC_FLAG9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,85,115,10
+    CONTROL         "Flag10",IDC_FLAG10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,95,115,10
+    CONTROL         "Flag11",IDC_FLAG11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,105,115,10
+    CONTROL         "Flag12",IDC_FLAG12,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,115,115,10
+    CONTROL         "Flag13",IDC_FLAG13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,125,115,10
+    CONTROL         "Flag14",IDC_FLAG14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,135,115,10
+    CONTROL         "Flag15",IDC_FLAG15,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,145,115,10
+    CONTROL         "Flag16",IDC_FLAG16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,155,115,10
+    CONTROL         "Flag17",IDC_FLAG17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,5,115,10
+    CONTROL         "Flag18",IDC_FLAG18,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,15,115,10
+    CONTROL         "Flag19",IDC_FLAG19,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,25,115,10
+    CONTROL         "Flag20",IDC_FLAG20,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,35,115,10
+    CONTROL         "Flag21",IDC_FLAG21,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,45,115,10
+    CONTROL         "Flag22",IDC_FLAG22,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,55,115,10
+    CONTROL         "Flag23",IDC_FLAG23,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,65,115,10
+    CONTROL         "Flag24",IDC_FLAG24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,75,115,10
+    CONTROL         "Flag25",IDC_FLAG25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,85,115,10
+    CONTROL         "Flag26",IDC_FLAG26,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,95,115,10
+    CONTROL         "Flag27",IDC_FLAG27,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,105,115,10
+    CONTROL         "Flag28",IDC_FLAG28,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,115,115,10
+    CONTROL         "Flag29",IDC_FLAG29,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,125,115,10
+    CONTROL         "Flag30",IDC_FLAG30,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,135,115,10
+    CONTROL         "Flag31",IDC_FLAG31,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,145,115,10
+    CONTROL         "Flag32",IDC_FLAG32,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,155,115,10
+END
+
+IDD_AREA DIALOG DISCARDABLE  0, 0, 296, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_AREA_TABS,"SysTabControl32",TCS_MULTILINE,10,
+                    5,275,220
+END
+
+IDD_AREA_RANGES DIALOG DISCARDABLE  0, 0, 226, 166
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Ranges (levels)",IDC_STATIC,5,5,220,70
+    RTEXT           "Soft:",IDC_STATIC,27,26,16,8
+    EDITTEXT        IDC_LOW_SOFT_RANGE,51,20,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "to:",IDC_STATIC,77,26,9,8
+    EDITTEXT        IDC_HIGH_SOFT_RANGE,93,20,20,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Hard:",IDC_STATIC,25,50,18,8
+    EDITTEXT        IDC_LOW_HARD_RANGE,51,45,20,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "to:",IDC_STATIC,77,50,9,8
+    EDITTEXT        IDC_HIGH_HARD_RANGE,93,45,20,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Economy",IDC_STATIC,5,85,220,80
+    EDITTEXT        IDC_HIGH_ECONOMY,85,95,65,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "billion, and",IDC_STATIC,159,98,34,8
+    EDITTEXT        IDC_LOW_ECONOMY,85,117,65,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "gold coins",IDC_STATIC,159,120,33,8
+    LTEXT           "(recommended)",IDC_STATIC,130,25,50,8
+    LTEXT           "(enforced)",IDC_STATIC,130,50,33,8
+    LTEXT           "Total:",IDC_STATIC,21,143,19,8
+    EDITTEXT        IDC_TOTAL_ECONOMY,50,139,100,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "gold coins",IDC_STATIC,159,143,33,8
+END
+
+IDD_AREA_VNUMS DIALOG DISCARDABLE  0, 0, 241, 226
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Low:",IDC_STATIC,25,31,16,8
+    EDITTEXT        IDC_MOB_LOW_VNUM,48,25,71,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "High:",IDC_STATIC,127,31,18,8
+    EDITTEXT        IDC_MOB_HIGH_VNUM,150,25,71,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Low:",IDC_STATIC,25,86,16,8
+    EDITTEXT        IDC_OBJ_LOW_VNUM,48,80,71,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "High:",IDC_STATIC,127,86,18,8
+    EDITTEXT        IDC_OBJ_HIGH_VNUM,150,80,71,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Low:",IDC_STATIC,25,146,16,8
+    EDITTEXT        IDC_ROOM_LOW_VNUM,48,140,71,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "High:",IDC_STATIC,127,146,18,8
+    EDITTEXT        IDC_ROOM_HIGH_VNUM,150,140,71,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Mobiles (mobs)",IDC_STATIC,10,10,225,45
+    GROUPBOX        "Objects",IDC_STATIC,10,67,225,45
+    GROUPBOX        "Rooms",IDC_STATIC,10,124,225,45
+    LTEXT           "Vnum ranges are deduced from the lowest and highest found in each section when the area is loaded.\n\nTo make changes permanent make dummy mobs/objects/rooms with the lowest and highest numbers desired in each range.",
+                    IDC_STATIC,10,175,225,45
+END
+
+IDD_AREA_NEIGHBOUR DIALOG DISCARDABLE  0, 0, 246, 196
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_NEIGHBOURS_LIST,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,5,235,150
+    PUSHBUTTON      "&Add...",IDC_ADD,5,160,50,14
+    PUSHBUTTON      "&Delete...",IDC_DELETE,75,160,50,14
+    LTEXT           "These settings only apply to a version 1 area file.",
+                    IDC_STATIC,5,180,154,8
+END
+
+IDD_NEIGHBOUR_NAME DIALOG DISCARDABLE  0, 0, 222, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Neighbour area name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name of neighbouring area:",IDC_STATIC,5,10,88,8
+    EDITTEXT        IDC_NAME,100,5,115,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,5,30,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,30,50,14
+END
+
+IDD_AREA_CLIMATE DIALOG DISCARDABLE  0, 0, 226, 71
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Temperature:",IDC_STATIC,7,10,43,8
+    RTEXT           "Precipitation:",IDC_STATIC,8,25,42,8
+    RTEXT           "Wind:",IDC_STATIC,30,40,20,8
+    COMBOBOX        IDC_TEMPERATURE,60,5,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PRECIPITATION,60,20,90,105,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WIND,60,35,90,105,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "These settings only apply to a version 1 area file.",
+                    IDC_STATIC,10,55,154,8
+END
+
+IDD_ADD_EXIT DIALOG DISCARDABLE  0, 0, 247, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add exit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Existing exits ...",IDC_STATIC,5,5,49,8
+    LISTBOX         IDC_EXIT_LIST,5,15,235,75,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL
+    RTEXT           "&Direction:",IDC_STATIC,6,98,31,8
+    COMBOBOX        IDC_DIRECTION,45,95,105,105,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "To room:",IDC_STATIC,8,118,29,8
+    DEFPUSHBUTTON   "Choose &Room ...",IDOK,45,115,70,14
+    CONTROL         "&Make a reverse exit too (leading back to this room)",
+                    IDC_MAKE_REVERSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    135,175,10
+    PUSHBUTTON      "Cancel",IDCANCEL,190,115,50,14
+END
+
+IDD_WALKTHROUGH DIALOGEX 0, 0, 405, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Area walkthrough"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_OUTPUT,5,5,400,215,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | NOT WS_TABSTOP,WS_EX_DLGMODALFRAME
+    LTEXT           "&Command:",IDC_STATIC,5,231,34,8
+    EDITTEXT        IDC_COMMAND,45,225,190,14,ES_AUTOHSCROLL
+    CONTROL         "Show &Vnums",IDC_SHOW_VNUMS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,240,225,57,10
+    CONTROL         "Show &Equipment",IDC_SHOW_EQUIPMENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,240,235,69,10
+    PUSHBUTTON      "Close",IDCANCEL,45,245,50,14
+END
+
+IDD_FIND_IN_DIALOG DIALOG DISCARDABLE  0, 0, 262, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",-1,5,10,34,8
+    EDITTEXT        IDC_FIND_WHAT,45,5,205,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Find",IDOK,45,25,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,200,25,50,14
+END
+
+IDD_AREA_TYPE DIALOG DISCARDABLE  0, 0, 186, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Area type to open..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Open area file of type ...",IDC_STATIC,15,10,76,8
+    CONTROL         "&SMAUG",IDC_AREA_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,25,42,10
+    CONTROL         "&ROM",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,40,33,
+                    10
+    DEFPUSHBUTTON   "OK",IDOK,130,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,28,50,14
+    LTEXT           "You can avoid seeing this question if you set your ""default area type"" in the Preferences dialog box.",
+                    IDC_STATIC,15,60,155,20
+END
+
+IDD_ROOM_EXIT DIALOG DISCARDABLE  0, 0, 296, 236
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_EXIT_TABS,"SysTabControl32",TCS_MULTILINE,10,
+                    5,275,220
+END
+
+IDD_CHOOSE_FROM_LIST DIALOG DISCARDABLE  0, 0, 247, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_ITEM_LIST,5,5,235,150,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,5,165,50,14
+    PUSHBUTTON      "Find &Next",IDC_FIND_NEXT,61,165,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,134,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,165,50,14
+END
+
+IDD_CHOOSE_FLAGS DIALOG DISCARDABLE  0, 0, 256, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose flags ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Flag1",IDC_FLAG1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,5,115,10
+    CONTROL         "Flag2",IDC_FLAG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,15,115,10
+    CONTROL         "Flag3",IDC_FLAG3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,25,115,10
+    CONTROL         "Flag4",IDC_FLAG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,35,115,10
+    CONTROL         "Flag5",IDC_FLAG5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,45,115,10
+    CONTROL         "Flag6",IDC_FLAG6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,55,115,10
+    CONTROL         "Flag7",IDC_FLAG7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,65,115,10
+    CONTROL         "Flag8",IDC_FLAG8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,75,115,10
+    CONTROL         "Flag9",IDC_FLAG9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,85,115,10
+    CONTROL         "Flag10",IDC_FLAG10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,95,115,10
+    CONTROL         "Flag11",IDC_FLAG11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,105,115,10
+    CONTROL         "Flag12",IDC_FLAG12,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,115,115,10
+    CONTROL         "Flag13",IDC_FLAG13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,125,115,10
+    CONTROL         "Flag14",IDC_FLAG14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,135,115,10
+    CONTROL         "Flag15",IDC_FLAG15,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,145,115,10
+    CONTROL         "Flag16",IDC_FLAG16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,155,115,10
+    CONTROL         "Flag17",IDC_FLAG17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,5,115,10
+    CONTROL         "Flag18",IDC_FLAG18,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,15,115,10
+    CONTROL         "Flag19",IDC_FLAG19,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,25,115,10
+    CONTROL         "Flag20",IDC_FLAG20,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,35,115,10
+    CONTROL         "Flag21",IDC_FLAG21,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,45,115,10
+    CONTROL         "Flag22",IDC_FLAG22,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,55,115,10
+    CONTROL         "Flag23",IDC_FLAG23,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,65,115,10
+    CONTROL         "Flag24",IDC_FLAG24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,75,115,10
+    CONTROL         "Flag25",IDC_FLAG25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,85,115,10
+    CONTROL         "Flag26",IDC_FLAG26,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,95,115,10
+    CONTROL         "Flag27",IDC_FLAG27,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,105,115,10
+    CONTROL         "Flag28",IDC_FLAG28,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,115,115,10
+    CONTROL         "Flag29",IDC_FLAG29,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,125,115,10
+    CONTROL         "Flag30",IDC_FLAG30,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,135,115,10
+    CONTROL         "Flag31",IDC_FLAG31,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,145,115,10
+    CONTROL         "Flag32",IDC_FLAG32,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,131,155,115,10
+    DEFPUSHBUTTON   "OK",IDOK,5,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,200,175,50,14
+END
+
+IDD_SELECT_FROM_LIST DIALOG DISCARDABLE  0, 0, 271, 231
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Set",IDC_STATIC,5,5,12,8
+    LISTBOX         IDC_AVAILABLE_LIST,154,15,93,210,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "<< &Insert",IDC_INSERT,106,47,40,14
+    PUSHBUTTON      "&Delete >>",IDC_DELETE,106,83,40,14
+    LTEXT           "&Not set",IDC_STATIC,155,5,24,8
+    LISTBOX         IDC_SELECTED_LIST,5,15,93,210,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_GENERATED_NAME DIALOG DISCARDABLE  0, 0, 186, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Name generator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Generated name:",IDC_STATIC,5,5,56,8
+    EDITTEXT        IDC_GENERATED_NAME,5,20,170,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    DEFPUSHBUTTON   "Close",IDOK,5,45,50,14
+    PUSHBUTTON      "&Try again",IDC_TRY_AGAIN,125,45,50,14
+END
+
+CG_IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 186, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,67,58,50,14
+    CONTROL         "Progress1",CG_IDC_PROGDLG_PROGRESS,"msctls_progress32",
+                    WS_BORDER,15,34,154,13
+    LTEXT           " 0 %",CG_IDC_PROGDLG_PERCENT,85,23,18,8
+    LTEXT           "",CG_IDC_PROGDLG_STATUS,13,7,158,8
+END
+
+IDD_GOTO_VNUM DIALOG DISCARDABLE  0, 0, 147, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go to Vnum ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Vnum:",IDC_STATIC,10,13,21,8
+    EDITTEXT        IDC_VNUM,40,10,65,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "&Mobile",IDC_VNUM_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,35,37,10
+    CONTROL         "&Object",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,55,35,37,10
+    CONTROL         "&Room",IDC_ROOM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,35,35,10
+    DEFPUSHBUTTON   "OK",IDOK,10,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,85,55,50,14
+END
+
+IDD_PREFSP4 DIALOG DISCARDABLE  0, 0, 342, 106
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Spell check"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Enable spell check",IDC_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,5,76,10
+    CONTROL         "&Check when closing ""edit"" window",IDC_CK_EDIT_WINDOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,28,126,10
+    CONTROL         "Check on &Area Check",IDC_CK_AREA_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,37,86,10
+    CONTROL         "Check when viewing &item",IDC_CK_VIEW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,46,97,10
+    CONTROL         "Accept ""&name"" as valid spelling",IDC_ACCEPT_NAME,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,70,116,10
+    PUSHBUTTON      "&Spell check preferences...",IDC_ENGINE_PREFS,10,87,115,
+                    14
+    GROUPBOX        "&Mobiles",IDC_STATIC,145,4,85,56
+    CONTROL         "Name",IDC_MOB_NAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,14,35,10
+    CONTROL         "Short description",IDC_MOB_SHORT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,153,24,69,10
+    CONTROL         "Long description",IDC_MOB_LONG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,34,68,10
+    CONTROL         "Description",IDC_MOB_DESC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,44,51,10
+    GROUPBOX        "&Rooms",IDC_STATIC,145,70,85,33
+    CONTROL         "Name",IDC_ROOM_NAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,80,35,10
+    CONTROL         "Description",IDC_ROOM_DESC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,90,51,10
+    GROUPBOX        "&Objects",IDC_STATIC,235,4,85,56
+    CONTROL         "Name",IDC_OBJ_NAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,244,14,35,10
+    CONTROL         "Short description",IDC_OBJ_SHORT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,244,24,69,10
+    CONTROL         "Long description",IDC_OBJ_LONG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,244,34,68,10
+    CONTROL         "Action description",IDC_OBJ_ACTION_DESC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,244,44,72,10
+    CONTROL         "Check &Help text",IDC_CK_HELP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,244,70,67,10
+    CONTROL         "Check E&xit descriptions",IDC_CK_EXIT_DESC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,244,80,89,10
+    CONTROL         "Check extra &descriptions",IDC_EXTRA_DESC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,244,90,93,10
+END
+
+IDD_AFFECT_EDIT DIALOG DISCARDABLE  0, 0, 252, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit affect"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Type:",IDC_STATIC,18,8,19,8
+    COMBOBOX        IDC_TYPE,45,5,175,175,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Modifier:",IDC_STATIC,9,29,28,8
+    EDITTEXT        IDC_MODIFIER,45,25,50,14,ES_AUTOHSCROLL
+    RTEXT           "&Duration:",IDC_STATIC,7,48,30,8
+    EDITTEXT        IDC_DURATION,45,45,50,14,ES_AUTOHSCROLL
+    RTEXT           "&Flags:",IDC_STATIC,17,69,20,8
+    EDITTEXT        IDC_FLAGS,45,65,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FLAG_MEANINGS,105,65,140,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,5,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,90,50,14
+END
+
+IDD_CREDITS DIALOG DISCARDABLE  0, 0, 377, 241
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Credits"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CREDITS_LIST,5,5,370,210,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,5,220,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_AREA_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_BLANK_ITEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_MOBILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_MOBILE_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_MOBILE_SUMMARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_MOBILE_STATS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_MUD_PROGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_OBJECT_AFFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_OBJECT_EXTRA_DESCRIPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_OBJECT_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_OBJECT_SUMMARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_OBJECT_STATS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_ROOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_ROOM_EXIT_DETAILS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_OBJECT_ROOM_MAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_ROOM_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+
+    IDD_ROOM_SUMMARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_RESETS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    ID_PROBLEMS_LOADING_AREA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 435
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_SHOP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_REPAIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_CHOOSE_MOB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_CHOOSE_ROOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_CHOOSE_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_CHOOSE_EXIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_DOCUMENT_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_ADD_TO_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_ADD_TO_ROOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_MOBILE_RESETS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_OBJECT_RESETS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_CHOOSE_SPELL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_SKILLS_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_SKILLSPAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_SKILLSPAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_SKILLSPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_SKILLSPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_COMMANDS_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_EDIT_COMMAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_SOCIALS_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_EDIT_SOCIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_DELETE_REFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_RENUMBER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_WEAR_FLAGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_PREFSP1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_PREFSP2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_PREFSP3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_GENERAL_FLAGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_AREA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_AREA_RANGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_AREA_VNUMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_AREA_NEIGHBOUR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_NEIGHBOUR_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_AREA_CLIMATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_ADD_EXIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_WALKTHROUGH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 398
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_FIND_IN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_AREA_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_ROOM_EXIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_CHOOSE_FROM_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_CHOOSE_FLAGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_SELECT_FROM_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_GENERATED_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    CG_IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_GOTO_VNUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_PREFSP4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_AFFECT_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_CREDITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 370
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\AreaEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_CREDITS             TEXT    DISCARDABLE     "res\\credits.txt"
+IDR_LICENSE             TEXT    DISCARDABLE     "res\\license.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_AREA_NAME DLGINIT
+BEGIN
+    IDC_AREA_TYPE, 0x403, 6, 0
+0x4d53, 0x5541, 0x0047, 
+    IDC_AREA_TYPE, 0x403, 4, 0
+0x4f52, 0x004d, 
+    0
+END
+
+IDD_PREFSP2 DLGINIT
+BEGIN
+    IDC_AREA_TYPE, 0x403, 14, 0
+0x4128, 0x6b73, 0x6f20, 0x206e, 0x706f, 0x6e65, 0x0029, 
+    IDC_AREA_TYPE, 0x403, 6, 0
+0x4d53, 0x5541, 0x0047, 
+    IDC_AREA_TYPE, 0x403, 4, 0
+0x4f52, 0x004d, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "AreaEditor"
+    IDR_AREAEDTYPE          "\nArea\nAreaEditor\nArea Files (*.are)\n.are\nAreaEditor.Document\nAreaEditor Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "AreaEditor"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_REGISTER_SMAUG_EDITOR 
+                            "Register Area Editor, or enter registration code"
+    IDS_CANNOT_BE_BLANK     "This field may not be blank."
+    IDS_MIN_STRING_SIZE     "This field must be a minimum of %1 characters."
+    IDS_PROPSHT_CAPTION     "Registration wizard"
+    ID_HELP_TIPOFTHEDAY     "Shows the tip of the day"
+    ID_FILE_AREA_SUMMARY    "Shows counts of various things in area"
+    ID_VIEW_WARNINGS        "View warnings generated when area was loaded"
+    ID_AREA_DELETE_ITEM     "Removes the selected item\nRemove item"
+    ID_AREA_ADD_ITEM        "Adds a new item to the area\nAdd item"
+    ID_AREA_FIND            "Find an item\nFind"
+    ID_AREA_FIND_NEXT       "Find next\nFind next"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CG_IDS_TIPOFTHEDAY      "Displays a Tip of the Day."
+    CG_IDS_TIPOFTHEDAYMENU  "Ti&p of the Day..."
+    CG_IDS_DIDYOUKNOW       "Did you know..."
+    CG_IDS_FILE_ABSENT      "Tips file does not exist in the prescribed directory"
+    CG_IDP_FILE_CORRUPT     "Trouble reading the tips file"
+    CG_IDS_TIPOFTHEDAYHELP  "&Help"
+    IDS_PROPSHT_CAPTION1    "Property Sheet"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STATUS_MODIFIED      "Modified"
+    ID_SKILLS_LOAD          "Loads skills/spells from skills file"
+    ID_SKILLS_SAVE          "Saves skills/spells to disk"
+    ID_SKILLS_EDIT          "Edits skills/spells"
+    ID_COMMANDS_LOAD        "Loads commands from commands file"
+    ID_COMMANDS_SAVE        "Saves commands to disk"
+    ID_COMMANDS_EDIT        "Edits commands"
+    ID_SOCIALS_LOAD         "Loads socials from socials file"
+    ID_SOCIALS_SAVE         "Saves socials to disk"
+    ID_SOCIALS_EDIT         "Edits socials"
+    ID_SKILLS_CLOSE         "Close skills file"
+    ID_COMMANDS_CLOSE       "Close commands file"
+    ID_SOCIALS_CLOSE        "Close socials file"
+    ID_FILE_PREFERENCES     "Change program preferences"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_AREA_CHECK           "Checks area for problems"
+    ID_AREA_DUPLICATE_ITEM  "Makes a duplicate of the selected item\nDuplicate selected item"
+    ID_AREA_RENUMBER        "Renumbers (and optionally compacts) the area"
+    ID_EDIT_IGNORE_VALIDATION_ERRORS 
+                            "When checked you are given the option to ignore field validation errors"
+    ID_AREA_WALKTHROUGH     "Simulates a walk-through of the area"
+    ID_FILE_EXPORT_MUSH     "Exports the area as MUSH code"
+    ID_FILE_IMPORT_ROM      "Imports a ROM area file"
+    ID_FILE_IMPORT_SMAUG    "Imports a SMAUG area file"
+    ID_MENUITEM32811        "Shows warnings generated during last load or save of this area"
+    ID_EDIT_GENERATENAME    "Generates a random mob name"
+    ID_EDIT_RELOADNAMES     "Reloads name parts from text file"
+    ID_VIEW_REFRESH         "Refreshes the labels in the tree view"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPENAREALIST    "Opens all areas listed in an area list file"
+    ID_WINDOW_CLOSEALL      "Closes all open windows"
+    ID_AREA_CHECKALLAREAS   "Checks all open areas"
+    ID_EDIT_GOTOVNUM        "Goes to a mob/object/room by vnum"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CG_IDS_PROGRESS_CAPTION "Loading areas..."
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\AreaEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,104 @@
+MUSHcode export
+---------------
+
+25 November 1998
+
+Written by:  Nick Gammon <nick@gamon.com.au>
+
+
+Summary
+-------
+
+SMAUG Editor now has a function to export an area as MUSH code.
+
+The MUSH export function (found under the File Menu > Export > MUSHcode) is intended to allow SMAUG areas to be exported as MUSH instructions which will allow a similar set of rooms, exits, mobs and objects to be set up in a MUSH.
+
+This has been specifically tested with PennMUSH version 1.7.2 patchlevel 12.
+
+
+Scope
+-----
+
+This function is designed to export setup instructions for:
+
+* rooms
+* exits linking rooms in the area
+* objects which have resets which put them into rooms
+* mobiles which have resets which put them into rooms
+
+In each case the name and description of the item is generated. Other things, like flags, MUD programs, stats and so on are ignored (many won't apply in a MUSH anyway).
+
+
+Differences between MUSH and SMAUG
+----------------------------------
+
+After using this exported code you will (hopefully) have added to your MUSH the room descriptions and exits, as mentioned above. What you will *not* have is a fully-operational SMAUG-style MUD. SMAUG is a Diku-MUD derivative, and as such, provides functionality such as shops, mobiles (monsters) that can be fought, doors with optional locks, and a built-in programming language that allows mobiles and rooms to do things automatically under certain circumstances.
+
+However this export function will let you easily add a bit of colour to your MUSH by using one or more of the many SMAUG areas available on the Internet. 
+
+Bear in mind that some areas rely upon MUD programs to move players from room to room (if they meet certain criteria, for example). As such programs are not part of the exported file you may find progress blocked at such a point. In this case you would need to manually link from one room to the next, or write the equivalent MUSHcode to achieve a similar result.
+
+
+Where can I find SMAUG areas?
+-----------------------------
+
+There are 24 areas supplied as part of the SMAUG distribution. This can be obtained from: http://www.game.org
+
+Other area files are available from (at the time of writing):
+
+Area Builders Forum: http://www.tidalwave.net/~rainman/abf/examples.html
+Curious Areas Workshop: http://democracy.queensu.ca/~fletcher/VieMud/Caw/
+SMAUG Area Exchange: http://www.shadow-lands.com/sareas.html
+
+
+A warning regarding PennMUSH throttling
+---------------------------------------
+
+There is anti-spam functionality built into PennMUSH that stops it executing large numbers of commands. After a batch of 1,000 commands from a single user, additional commands are processed at the (rather slow) rate of one per second. To avoid this, break up the generated mushcode file into smaller files, if necessary, so that each file is less than 1,000 lines long.
+
+
+How to use the MUSH export function
+-----------------------------------
+
+Important! BACK UP YOUR DATABASE!  If something goes wrong during the import process (sending the MUSHcode to your MUSH) it will be very tedious to manually delete hundreds of rooms and exits.
+
+1. Load the appropriate area into SMAUG Editor.
+2. Select File > Export > MUSHcode.
+3. Choose an appropriate filename for the exported area file (or accept the default name).
+4. When the export is complete you will see a dialog box telling you how many rooms, exits, mobiles and objects were exported.
+5. Save your MUSH database (enter: @dump)
+6. Backup your database (copy the output database to a different file name)
+7. Make sure you are in a room where you have permission to create exits. This may not apply to public areas. This is because the MUSHcode export creates exits in the current room and then teleports them to the appropriate room.
+8. If the exported mushcode file exceeds 1,000 lines use a text editor to break it up into manageable chunks (eg. 500 lines each).
+9. Using a suitable client program (MUSHclient is recommended) send the mushcode file (or files, if you have broken a large file into chunks) to the MUSH. With MUSHclient use the Game > Send File function.
+10. After sending each chunk, scroll back through the output buffer of your client program and check that there were no error messages.
+11. If there were major error messages, shutdown your MUSH, restore you database from the backup, and restart the MUSH.
+12. After running the mushcode you should have in your inventory an object called DBHOLDER which is a placeholder which stores the relationship between room vnums and database numbers. You can use this to work out which db number each room is. (ie. "examine dbholder") Try teleporting to one of the new rooms and checking that the descriptions and exits are correct. To find the db number for a specific room, enter its vnum like this:  
+
+examine dbholder/room10410
+
+You will see something like this:
+
+ROOM10410 [#3]: #435
+
+Thus, room 10410 in the SMAUG area is database number #435 in the MUSH.
+
+12. Link the newly generated rooms to your existing MUSH. Normally the first room in an area is a "starting point", so if you link an existing MUSH room to that room, you will probably find that most other rooms are accessible. I suggest doing a trial walkthrough to check this out.
+
+
+Warning regarding multiple dbholders
+------------------------------------
+
+The generated code makes use of an object called DBHOLDER to track the relationship between SMAUG vnums and MUSH database numbers. This is necessary so that exits can be linked to the correct rooms. If you run multiple imports of mushcode, make sure you delete (or rename) old DBHOLDER objects. The import function will not work correctly if you have two or more DBHOLDERs. 
+
+Also, the mushcode relies on side-effects being enabled. This is a MUSH compilation option.
+
+It is:
+
+#define FUNCTION_SIDE_EFFECTS
+
+in options.h
+
+If this is *not* enabled, then the import will not work, as the functions create(), link() etc. will not work.
+
+

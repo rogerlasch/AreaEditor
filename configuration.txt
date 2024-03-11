@@ -1,0 +1,165 @@
+Area Editor - Configuration file
+================================
+
+Friday, 5 May 2000
+
+Author: Nick Gammon 
+
+-----------------------------------------
+If you are reading this file with NotePad,
+enable "Word Wrap" under the Edit menu for
+proper viewing of it.
+-----------------------------------------
+
+Area Editor is produced by Gammon Software Solutions:  http://www.gammon.com.au
+
+
+Configuration file
+------------------
+
+In order to allow for MUDs that have recompiled the ROM/SMAUG server and changed various limits (eg. maximum level, maximum vnum) the program now uses a configuration file to test for such things, rather than having them hard-coded into the program.
+
+This allows you to set up things like maximum level, maximum armour class, maximum vnum, based on what *your* MUD has as its standard. 
+
+To process this file you must use File > Preferences to define the location of this file. 
+
+Once you have done this the file will be processed. To reprocess the configuration file during an editing session, just use Notepad or any other text editor to make appropriate changes, and then open the File > Preferences dialog box again. Once you click OK the configuration file will be reprocessed.
+
+The contents of CONFIG.DAT should be fairly self-explanatory. It looks like this:
+
+#GENERAL
+
+maxlevel 65
+maxvnum  2147483647
+maxresetfreq 60
+End
+
+For example, to change the maximum level you are allowed to enter for a mob etc. from 65 to 100, change "maxlevel 65" to "maxlevel 100".
+
+Flag values in configuation file
+--------------------------------
+
+The configuration file CONFIG.DAT also contains the meanings of the 32-bit flags used in various parts of SMAUG, namely:
+
+Mobile actions (ACT)
+Mobile affects (AFFECT)
+Mobile attacks (ATTACK)
+Mobile defenses (DEFENSE)
+Mobile parts (PARTS)
+Mobile resist/immune/susceptible (RESIST)
+Mobile languages (LANGUAGE)
+Mobile form (FORM)
+
+Object flags (OBJECT)
+Object wear flags (WEAR)
+Object furniture flags (FURNITURE)
+Object container flags (CONTAINER)
+Object weapon flags (WEAPONFLAGS)
+Object portal flags (PORTAL)
+
+Room flags (ROOM)
+Room exit flags (EXIT)
+
+Area flags (AREA)
+
+The flag section names appear above in brackets. After each section you can enter "Flag01" through to "Flag32" (or Flag64, see below) with a single-word flag name after it, eg.
+
+#ROOM
+Flag01    Dark
+Flag02    Death
+Flag03    Nomob
+Flag04    Indoors
+Flag17    Silence
+Flag23    Teleport
+End
+
+As the example above shows, the flags do not have to be sequential. The flag number refers to the "bit number" or "bit vector" used within the SMAUG code. They should correspond.
+
+The word "End" is required at the end of each section of flags.
+
+If you omit a flag section from the configuration file (or do not specify a configuration file name under File > Preferences) then default values are taken for the flags in that section. 
+
+As soon as you specify a flag section, then *all* of the default values (in that section) are discarded, and the section is replaced by the values specified in the configuration file.
+
+Extra flags for SMAUG
+---------------------
+
+Due to SMAUG 1.4a implementing "extended bitvectors" some flags can now go up to 64 bits. These are:
+
+Mob: act, affect, attack and defense
+Object: flags
+
+
+Lists in the configuration file
+-------------------------------
+
+The configuration file also contains "lists of things", such as races, classes, spell names, and so on. By using your own list section you can use a different set of races, special functions or whatever. If you omit a list section then defaults from the program will be used. These will generally be correct for "standard" SMAUG but will probably not be completely correct for ROM areas.
+
+The various lists are:
+
+// mobs
+#SEX       
+#SIZE      
+#RACE      
+#CLASS
+#POSITION  
+#SPECIAL   
+
+
+// objects
+#WEAPON     
+#LIQUID     
+#ATTACKLIST     
+#ITEM       
+#WEARLIST       
+#AFFECTS    
+#WEAPONCONDITION  
+#ARMOURCONDITION  
+#FOODCONDITION    
+#AFFECTWHAT
+
+// rooms
+
+#SECTOR    
+#DIRECTION 
+
+// general
+
+#SKILLTYPE   
+#SPELL       
+#SMAUGSKILL  
+#ROMSKILL    
+#PROGRAM     
+
+
+Here is an example of using a list to declare the gender of mobs:
+
+#SEX
+
+none	
+male	
+female
+either
+End
+
+
+Note the required word "End" at the end of the list. (Let's hope you don't want to call something "End"!).  :P
+
+The supplied files: SMAUGCONFIG.DAT and ROMCONFIG.DAT are setup with standard settings for both SMAUG and ROM areas. The program defaults to the contents of SMAUGCONFIG.DAT (if no configuration file is supplied, or if certain configuration sections are omitted).
+
+
+Syntax of lists in the configuration file
+-----------------------------------------
+
+1. Each list section starts with the "list identifier" (eg. "#RACE") and ends with the word "End".
+2. A list may have any number of items in it, including none.
+3. The order of items in the list *is* important, especially if the things in the list are referred to in the server by number. List items are automatically numbered, starting at zero. In the example above for #SEX, "none" will be 0, "male" will be 1, "female" will be 2, and so on.
+4. You can override the default numbers by specifying your own. eg.  "male=62". Only do this if you are sure this is a good idea.
+5. You can equate an item in the list to an earlier one, by name. eg. "woman=female".
+6. There is a special list, called #CONSTANTS, where you can put things you might want to use in multiple lsts. You can equate an item in any list to something in the #CONSTANTS list, by name. (Naturally, you must put the #CONSTANTS list earlier in the configuration file than the list which refers to it).
+7. If the entire list is omitted from the configuration file, then the default values which are hard-coded into the Area Editor program will be used.
+
+Warning - you may cause unexpected behaviour in your MUD server if you re-order lists, or add or remove items without a good reason. Some lists are tied to numbers which are hard-coded into the SMAUG/ROM servers. Only change them if you understand the reason the list items are there, and why they are in the order they are.
+
+
+

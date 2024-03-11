@@ -1,0 +1,189 @@
+Area Editor - User Manual
+=========================
+
+12th November 1998
+
+Author: Nick Gammon 
+
+-----------------------------------------
+If you are reading this file with NotePad,
+enable "Word Wrap" under the Edit menu for
+proper viewing of it.
+-----------------------------------------
+
+Area Editor is produced by Gammon Software Solutions:  
+
+http://www.gammon.com.au
+
+
+Introduction
+------------
+
+You can use Area Editor to edit multiple ROM/SMAUG area simultaneously. Each area is shown in its own window with a "tree view" on the left, showing the different parts of the area (Mobs, Rooms, Objects, Shops and so on). By (single) clicking on any item in the tree view, details about that item are shown in the "detail" view on the right.
+
+
+Opening an area
+---------------
+
+You can open either a SMAUG or ROM area file. As both have different formats, and it isn't easy to automatically detect which is which, you must tell the program what sort of area you want to open. The simplest way is to set up the:
+
+File > Preferences > General > Default Area Type To Open
+
+to be either ROM or SMAUG (depending on which sort of area file you normally work with. Then just use the :
+
+File > Open
+
+command (Ctrl+O) to open an area file of that type.
+
+Alternatively, you can use:
+
+File > Open As...
+
+to open either a SMAUG or ROM area, or press the appropriate function key, as follows:
+
+SMAUG - F11
+ROM - F12
+
+If you leave the "default area type" as "ask" then each time you open an area (eg. by using File > Open, or by double-clicking an area file on disk) then you will be asked whether it is a ROM or SMAUG area.
+
+
+Saving an area
+--------------
+
+When you select:
+
+File > Save
+
+(or press Ctrl+S) the area is automatically saved in the current format, which defaults to the format it was loaded as. In other words, a ROM area will be saved as ROM, and a SMAUG area as SMAUG. However if you used the "Area" window to change the area type (from ROM to SMAUG, or SMAUG to ROM) then it will then be saved in the new format.
+
+
+Converting an area from ROM to SMAUG or vice-versa
+--------------------------------------------------
+
+As discussed above, just load the area in the original type (see "Opening an Area", above), use the "Area" window to change the area type, and then save the area. You are advised to use "Save As" to save the area after changing its type, and then save under a different name, as some things in SMAUG are not supported in ROM, and some things in ROM are not suppored in SMAUG, and thus will be lost if the area is saved in a different format.
+
+
+Recommended way of converting areas from SMAUG to ROM, or ROM to SMAUG
+----------------------------------------------------------------------
+
+1. Load the appropriate configuration file for the area you are converting *from*. eg. SMAUGCONFIG.DAT if you are opening a SMAUG area for conversion.
+2. Open the area.
+3. Print out the area so you have a hard-copy of which flag settings were used in the old area.
+4. Use the File > Preferences dialog to change the configuration file to the appropriate one for the area you are converting *to*. (ie. ROMCONFIG.DAT for a ROM area)
+5. Change the area type in the area header.
+6. Check each object/mob/room against your printout in step 3 above, and adjust flags accordingly so that they are correct for the new area type.
+7. Use the File > Save As ...  menu option to write out the area in the new format, under a different name.
+
+
+Making a new area from scratch
+------------------------------
+
+1. Use:
+
+File > New
+
+to create a new area. 
+
+2. Click on the word "Area" in the tree view (if it is not already selected) and then choose "Add area" from the Area menu. This will add an area header to your area.
+
+3. Select the area type (ROM or SMAUG) in the area header.
+
+4. Enter the area name and author in the appropriate boxes.
+
+5. Use the Vnums tab to enter the vnum range for objects, mobs and rooms in your area.
+
+6. You can now click on the "Mobiles", "Rooms" and "Objects" items in the tree view to add things to your area. To save hassle later on, you are advised to put one mobile, room, and object at each end of the vnum range you are planning to use. That way, when the area is loaded later on, the program can deduce your mobile, room and object vnum ranges (by looking at the lowest and highest vnum of each section).
+
+For example, if you are going to use vnum range 24000 to 24050, create a mobile with a vnum of 24000, and a second one of vnum 24050. Then do the same with two rooms, and two objects.
+
+
+Adding mobiles/objects/rooms
+----------------------------
+
+To add a mobile, click on the word "Mobiles" in the tree view on the left. Then choose:
+
+Area > Add mobile
+
+or press Ctrl+A  (or click on the "Add Item" button on the button bar).
+
+The next available vnum for mobiles will be allocated, and the new mobile with default settings will be created. You can then click on the tabs on the right-hand side of the window to set the description, stats and so on.
+
+Use a similar procedure to add a room or object.
+
+
+Adding a reset
+--------------
+
+Many resets can be added from the "room" view. By clicking on a room, you can add mob or object, and then equip them by clicking on the appropriate buttons. This will add the appropriate resets to the area.
+
+If you want to add a reset manually, either click on the word "Resets" in the tree view, and the choose:
+
+Area > Add Reset
+
+or press Ctrl+A  (or click on the "Add Item" button on the button bar). This will add a reset at the start of the resets list.
+
+To add a reset *after* an existing reset, click on the reset you want to add after, and then choose "Add Reset".
+
+
+Adding programs/exits/descriptions and so on
+--------------------------------------------
+
+Click on the appropriate thing you want to add something to (eg. click on a room to add an exit, click on an object to add an effect), then choose:
+
+Area > Add <something>
+
+or press Ctrl+A  (or click on the "Add Item" button on the button bar).
+
+If there is more than one thing you can add (eg. you can add a description, effect or program to an object) then a dialog box will pop up asking you what sort of thing you want to add.
+
+
+Duplicating things
+------------------
+
+If you have gone to a lot of trouble to set up an object/room/mob with various flags and stats, and want to make more of them, just highlight the thing you want to duplicate, and then choose:
+
+Area > Duplicate <thing>
+
+or press Ctrl+D  (or click on the "Duplicate Selected Item" button on the button bar).
+
+This will duplicate the thing (allocating it the first available vnum) and anything subordinate to it. Eg. if you duplicate an object you will also duplicate any effects, descriptions and programs under it.
+
+
+Removing things
+---------------
+
+To delete something, just click on it (in the tree view) and then choose:
+
+Area > Remove <thing>
+
+or press Del (or click on tahe "Remove Item" button on the button bar).
+
+You will see a warning message, click "Yes" if you want to go ahead and remove the selected item.
+
+Note that if you remove something then anything subordinate to it will also be removed.
+Eg. if you remove an object you will also remove any effects, descriptions and programs under it.
+
+
+Area check
+----------
+
+This very powerful feature does an extensive cross-reference of your area looking for exits that don't lead to valid rooms, resets that don't load valid things, and items that are not used (eg. a mob that is never loaded in a reset or program). You also get various summaries (number of mobs, number of mobs per level, commands/socials/skills/spells used, number of rooms, exits, objects and so on).
+
+
+Area walkthrough
+----------------
+
+This allows you to simulate walking through your area, room by room. You can see each room, its exits and contents, similarly to what you would see when playing the game. 
+
+You can enter commands, such as "north", "south", "goto <vnum>", and "look <object>". 
+
+The area walkthrough starts with the first room in the area, or if you have selected a room in the left-hand view, the selected room. You can optionally view item vnums (which looks less realistic but is more helpful for debugging), and mob equip and give resets.
+
+Once you have finished your walkthrough, the room you last visited is selected - in case you have found a problem in its description, or resets, so you can easily edit it.
+
+
+Renumber area
+-------------
+
+This renumbers objects/rooms/mobs in an area, with the "compression" option allowing the new number range to eliminate gaps (ie. make the range as small as possible). As well as renumbering the objects/rooms/mobs all referring things (eg. exits) are also modified to reflect the new numbers. Also, references to vnums in mob programs are updated as well.
+

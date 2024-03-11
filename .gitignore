@@ -27,6 +27,14 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
+
+Release/
+release/
+Debug/
+debug/
+.vs/
+.VS/
+VS/
+vs/

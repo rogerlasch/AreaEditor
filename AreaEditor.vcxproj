@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{3D479EF2-10AB-43A6-A504-ACDBADC0B267}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>AreaEditor\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\AreaEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4244;4334;4996;</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <UseFullPaths>false</UseFullPaths>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\AreaEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0c09</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\AreaEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\AreaEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\AreaEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0c09</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\AreaEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\AreaEditor.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddExitDlg.cpp" />
+    <ClCompile Include="AddToObjectDlg.cpp" />
+    <ClCompile Include="AddToRoomDlg.cpp" />
+    <ClCompile Include="Affect.cpp" />
+    <ClCompile Include="Area.cpp" />
+    <ClCompile Include="AreaCheck.cpp" />
+    <ClCompile Include="AreaClimateView.cpp" />
+    <ClCompile Include="AreaEditor.cpp" />
+    <ClCompile Include="AreaEditorDoc.cpp" />
+    <ClCompile Include="AreaEditorView.cpp" />
+    <ClCompile Include="AreaLoadingProblems.cpp" />
+    <ClCompile Include="AreaNameView.cpp" />
+    <ClCompile Include="AreaNeighbourView.cpp" />
+    <ClCompile Include="AreaRangesView.cpp" />
+    <ClCompile Include="AreaRenumber.cpp" />
+    <ClCompile Include="AreaSummary.cpp" />
+    <ClCompile Include="AreaTypeDlg.cpp" />
+    <ClCompile Include="AreaView.cpp" />
+    <ClCompile Include="AreaVnumsView.cpp" />
+    <ClCompile Include="BlankView.cpp" />
+    <ClCompile Include="CheckCommandSyntax.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ChooseExitDlg.cpp" />
+    <ClCompile Include="ChooseFlagsDlg.cpp" />
+    <ClCompile Include="ChooseFromListDlg.cpp" />
+    <ClCompile Include="ChooseMobDlg.cpp" />
+    <ClCompile Include="ChooseObjectDlg.cpp" />
+    <ClCompile Include="ChooseRoomDlg.cpp" />
+    <ClCompile Include="ChooseSpellDlg.cpp" />
+    <ClCompile Include="Clipboard.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Commands.cpp" />
+    <ClCompile Include="CommandsListDlg.cpp" />
+    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="const.cpp" />
+    <ClCompile Include="CreditsDlg.cpp" />
+    <ClCompile Include="DDV_validation.cpp" />
+    <ClCompile Include="DeleteXrefDlg.cpp" />
+    <ClCompile Include="EditAffectDlg.cpp" />
+    <ClCompile Include="EditCommandDlg.cpp" />
+    <ClCompile Include="EditDlg.cpp" />
+    <ClCompile Include="EditSocialDlg.cpp" />
+    <ClCompile Include="exceptions.cpp" />
+    <ClCompile Include="Exit.cpp" />
+    <ClCompile Include="ExtraDescription.cpp" />
+    <ClCompile Include="FileReadWrite.cpp" />
+    <ClCompile Include="FindDlg.cpp" />
+    <ClCompile Include="FindInDialogDlg.cpp" />
+    <ClCompile Include="FlagsListPage.cpp" />
+    <ClCompile Include="format.cpp" />
+    <ClCompile Include="GeneralUtilities.cpp" />
+    <ClCompile Include="GeneratedNameDlg.cpp" />
+    <ClCompile Include="genprint.cpp" />
+    <ClCompile Include="GotoVnumDlg.cpp" />
+    <ClCompile Include="Help.cpp" />
+    <ClCompile Include="HelpView.cpp" />
+    <ClCompile Include="HyprLink.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Mobile.cpp" />
+    <ClCompile Include="MobileNamePage.cpp" />
+    <ClCompile Include="MobileResetsPage.cpp" />
+    <ClCompile Include="MobileStatsPage.cpp" />
+    <ClCompile Include="MobileSummaryPage.cpp" />
+    <ClCompile Include="MobileView.cpp" />
+    <ClCompile Include="MUDitem.cpp" />
+    <ClCompile Include="MUDObject.cpp" />
+    <ClCompile Include="MUDprogram.cpp" />
+    <ClCompile Include="MUDProgramView.cpp" />
+    <ClCompile Include="MUSHexport.cpp" />
+    <ClCompile Include="NameGeneration.cpp" />
+    <ClCompile Include="NeighbourNameDlg.cpp" />
+    <ClCompile Include="NumberUtils.cpp" />
+    <ClCompile Include="ObjectAffectView.cpp" />
+    <ClCompile Include="ObjectExtraDescriptionView.cpp" />
+    <ClCompile Include="ObjectNamePage.cpp" />
+    <ClCompile Include="ObjectResetsPage.cpp" />
+    <ClCompile Include="ObjectStatsPage.cpp" />
+    <ClCompile Include="ObjectSummaryPage.cpp" />
+    <ClCompile Include="ObjectView.cpp" />
+    <ClCompile Include="Preferences.cpp" />
+    <ClCompile Include="PrefsP1.cpp" />
+    <ClCompile Include="PrefsP2.cpp" />
+    <ClCompile Include="PrefsP3.cpp" />
+    <ClCompile Include="PrefsP4.cpp" />
+    <ClCompile Include="Printing.cpp" />
+    <ClCompile Include="ProgDlg.cpp" />
+    <ClCompile Include="RenumberDlg.cpp" />
+    <ClCompile Include="Repair.cpp" />
+    <ClCompile Include="RepairView.cpp" />
+    <ClCompile Include="Reset.cpp" />
+    <ClCompile Include="ResetView.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="RoomExitDetails.cpp" />
+    <ClCompile Include="RoomExitView.cpp" />
+    <ClCompile Include="RoomMap.cpp" />
+    <ClCompile Include="RoomMapView.cpp" />
+    <ClCompile Include="RoomNamePage.cpp" />
+    <ClCompile Include="RoomSummaryPage.cpp" />
+    <ClCompile Include="RoomView.cpp" />
+    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="ShopView.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="SkillAffect.cpp" />
+    <ClCompile Include="Skills.cpp" />
+    <ClCompile Include="SkillsListDlg.cpp" />
+    <ClCompile Include="SkillsPages.cpp" />
+    <ClCompile Include="SkillsSheet.cpp" />
+    <ClCompile Include="Social.cpp" />
+    <ClCompile Include="Socials.cpp" />
+    <ClCompile Include="SocialsListDlg.cpp" />
+    <ClCompile Include="StatLink.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TipDlg.cpp" />
+    <ClCompile Include="WalkthroughDlg.cpp" />
+    <ClCompile Include="WearFlagsDlg.cpp" />
+    <ClCompile Include="Welcome1Dlg.cpp" />
+    <ClCompile Include="WelcomeDlg.cpp" />
+    <ClCompile Include="winplace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AreaEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddToObjectDlg.h" />
+    <ClInclude Include="AddToRoomDlg.h" />
+    <ClInclude Include="AreaClimateView.h" />
+    <ClInclude Include="AreaEditor.h" />
+    <ClInclude Include="AreaEditorDoc.h" />
+    <ClInclude Include="AreaEditorView.h" />
+    <ClInclude Include="AreaFlagsView.h" />
+    <ClInclude Include="AreaLoadingProblems.h" />
+    <ClInclude Include="AreaNameView.h" />
+    <ClInclude Include="AreaNeighbourView.h" />
+    <ClInclude Include="AreaRangesView.h" />
+    <ClInclude Include="AreaRead.h" />
+    <ClInclude Include="AreaSummary.h" />
+    <ClInclude Include="AreaTypeDlg.h" />
+    <ClInclude Include="AreaView.h" />
+    <ClInclude Include="AreaVnumsView.h" />
+    <ClInclude Include="AuthorNameView.h" />
+    <ClInclude Include="BlankView.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ChooseExitDlg.h" />
+    <ClInclude Include="ChooseFlagsDlg.h" />
+    <ClInclude Include="ChooseFromListDlg.h" />
+    <ClInclude Include="ChooseMobDlg.h" />
+    <ClInclude Include="ChooseObjectDlg.h" />
+    <ClInclude Include="ChooseRoomDlg.h" />
+    <ClInclude Include="ChooseSpellDlg.h" />
+    <ClInclude Include="CommandsListDlg.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="CreditsDlg.h" />
+    <ClInclude Include="DefaultFlags.h" />
+    <ClInclude Include="DefaultLists.h" />
+    <ClInclude Include="defaults.h" />
+    <ClInclude Include="DeleteXrefDlg.h" />
+    <ClInclude Include="EditAffectDlg.h" />
+    <ClInclude Include="EditCommandDlg.h" />
+    <ClInclude Include="EditDlg.h" />
+    <ClInclude Include="EditSocialDlg.h" />
+    <ClInclude Include="FindDlg.h" />
+    <ClInclude Include="FindInDialogDlg.h" />
+    <ClInclude Include="FlagsListPage.h" />
+    <ClInclude Include="GeneralFlagsPage.h" />
+    <ClInclude Include="GeneratedNameDlg.h" />
+    <ClInclude Include="GotoVnumDlg.h" />
+    <ClInclude Include="HelpView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MobileActionsPage.h" />
+    <ClInclude Include="MobileAffectPage.h" />
+    <ClInclude Include="MobileAttacksPage.h" />
+    <ClInclude Include="MobileBodyPartsPage.h" />
+    <ClInclude Include="MobileDefensesPage.h" />
+    <ClInclude Include="MobileNamePage.h" />
+    <ClInclude Include="MobileResetsPage.h" />
+    <ClInclude Include="MobileResistantPage.h" />
+    <ClInclude Include="MobileSpeaksPage.h" />
+    <ClInclude Include="MobileStatsPage.h" />
+    <ClInclude Include="MobileSummaryPage.h" />
+    <ClInclude Include="MobileView.h" />
+    <ClInclude Include="MUDProgramView.h" />
+    <ClInclude Include="NeighbourNameDlg.h" />
+    <ClInclude Include="ObjectAffectView.h" />
+    <ClInclude Include="ObjectExtraDescriptionView.h" />
+    <ClInclude Include="ObjectExtraFlagsPage.h" />
+    <ClInclude Include="ObjectNamePage.h" />
+    <ClInclude Include="ObjectResetsPage.h" />
+    <ClInclude Include="ObjectStatsPage.h" />
+    <ClInclude Include="ObjectSummaryPage.h" />
+    <ClInclude Include="ObjectView.h" />
+    <ClInclude Include="PrefsDlg.h" />
+    <ClInclude Include="PrefsP1.h" />
+    <ClInclude Include="PrefsP2.h" />
+    <ClInclude Include="PrefsP3.h" />
+    <ClInclude Include="PrefsP4.h" />
+    <ClInclude Include="ProgDlg.h" />
+    <ClInclude Include="RenumberDlg.h" />
+    <ClInclude Include="RepairView.h" />
+    <ClInclude Include="ResetView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RoomExitDetails.h" />
+    <ClInclude Include="RoomExitView.h" />
+    <ClInclude Include="RoomFlagsPage.h" />
+    <ClInclude Include="RoomMapView.h" />
+    <ClInclude Include="RoomNamePage.h" />
+    <ClInclude Include="RoomSummaryPage.h" />
+    <ClInclude Include="RoomView.h" />
+    <ClInclude Include="ShopView.h" />
+    <ClInclude Include="SkillsListDlg.h" />
+    <ClInclude Include="SkillsPages.h" />
+    <ClInclude Include="SkillsSheet.h" />
+    <ClInclude Include="SocialsListDlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TipDlg.h" />
+    <ClInclude Include="WalkthroughDlg.h" />
+    <ClInclude Include="WearFlagsDlg.h" />
+    <ClInclude Include="Welcome1Dlg.h" />
+    <ClInclude Include="WelcomeDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.bmp" />
+    <Image Include="res\AreaEditor.ico" />
+    <Image Include="res\AreaEditorDoc.ico" />
+    <Image Include="res\litebulb.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="Splsh16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AreaEditor.reg" />
+    <CustomBuild Include="config.dat" />
+    <CustomBuild Include="res\AreaEditor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="configuration.txt" />
+    <Text Include="mushexport.txt" />
+    <Text Include="ReadMe.txt" />
+    <Text Include="res\credits.txt" />
+    <Text Include="res\license.txt" />
+    <Text Include="tips.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

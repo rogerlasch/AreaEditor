@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{193eac13-f681-4f6d-b515-e1e36a2c6805}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Splitter Views">
+      <UniqueIdentifier>{95a656df-4904-41fc-a435-bb78cd7ddcc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Splitter Views\Mobiles">
+      <UniqueIdentifier>{2ef43195-86af-495b-902f-6a7761115f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Splitter Views\Objects">
+      <UniqueIdentifier>{764f9710-4934-44a7-813b-58ad55ea4cd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Splitter Views\Rooms">
+      <UniqueIdentifier>{102574d3-ff3d-41c4-909c-f5753e5ed6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Splitter Views\Area">
+      <UniqueIdentifier>{2f4e1cf6-b2e9-4564-ace2-ea74f6182282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{ffe42717-1ce5-440f-8887-d53714320f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs">
+      <UniqueIdentifier>{2ed941d4-7530-4335-8614-3ae2784223ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Choose">
+      <UniqueIdentifier>{6ea3b2bc-8a7c-46c0-aadf-3adc0f081d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Prefs">
+      <UniqueIdentifier>{9902223b-83e8-4cee-a721-c9031242335e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Skills">
+      <UniqueIdentifier>{5192e6a5-f0f5-4f94-ac74-0c461f5194b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Socials">
+      <UniqueIdentifier>{02b62844-5f93-4b66-8bd5-14e3d46f4480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Welcome, splash, tips">
+      <UniqueIdentifier>{426a0075-3496-4fe7-98a9-239b14ff8411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Adding">
+      <UniqueIdentifier>{342169e9-e294-4885-8311-5fb52d492611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs\Commands">
+      <UniqueIdentifier>{71b401a3-a58b-4818-9650-37b3259641e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Subtypes">
+      <UniqueIdentifier>{7ebc200e-7523-4ce7-8e9d-25d0bc6629d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Commands_Skills_Socials">
+      <UniqueIdentifier>{253d9231-f1af-4e0f-b19e-08c4d4ac3d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{325753e8-7230-47ae-a419-11ff9ac7bd00}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c15e7a37-ade0-4170-9695-d46545a5a371}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MobileNamePage.cpp">
+      <Filter>Source Files\Splitter Views\Mobiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MobileResetsPage.cpp">
+      <Filter>Source Files\Splitter Views\Mobiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MobileStatsPage.cpp">
+      <Filter>Source Files\Splitter Views\Mobiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MobileSummaryPage.cpp">
+      <Filter>Source Files\Splitter Views\Mobiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MobileView.cpp">
+      <Filter>Source Files\Splitter Views\Mobiles</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectAffectView.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectExtraDescriptionView.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectNamePage.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectResetsPage.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStatsPage.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectSummaryPage.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectView.cpp">
+      <Filter>Source Files\Splitter Views\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomExitDetails.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomExitView.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomMapView.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomNamePage.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomSummaryPage.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomView.cpp">
+      <Filter>Source Files\Splitter Views\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaClimateView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaNameView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaNeighbourView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaRangesView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaVnumsView.cpp">
+      <Filter>Source Files\Splitter Views\Area</Filter>
+    </ClCompile>
+    <ClCompile Include="BlankView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="MUDProgramView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ResetView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ShopView.cpp">
+      <Filter>Source Files\Splitter Views</Filter>
+    </ClCompile>
+    <ClCompile Include="Clipboard.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="DDV_validation.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReadWrite.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="format.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralUtilities.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="genprint.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="HyprLink.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberUtils.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="StatLink.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="winplace.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseExitDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseFlagsDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseFromListDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseMobDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseObjectDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseRoomDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseSpellDlg.cpp">
+      <Filter>Source Files\Dialogs\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="Preferences.cpp">
+      <Filter>Source Files\Dialogs\Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefsP1.cpp">
+      <Filter>Source Files\Dialogs\Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefsP2.cpp">
+      <Filter>Source Files\Dialogs\Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefsP3.cpp">
+      <Filter>Source Files\Dialogs\Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefsP4.cpp">
+      <Filter>Source Files\Dialogs\Prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="EditAffectDlg.cpp">
+      <Filter>Source Files\Dialogs\Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillsListDlg.cpp">
+      <Filter>Source Files\Dialogs\Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillsPages.cpp">
+      <Filter>Source Files\Dialogs\Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillsSheet.cpp">
+      <Filter>Source Files\Dialogs\Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="EditSocialDlg.cpp">
+      <Filter>Source Files\Dialogs\Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="SocialsListDlg.cpp">
+      <Filter>Source Files\Dialogs\Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="TipDlg.cpp">
+      <Filter>Source Files\Dialogs\Welcome, splash, tips</Filter>
+    </ClCompile>
+    <ClCompile Include="Welcome1Dlg.cpp">
+      <Filter>Source Files\Dialogs\Welcome, splash, tips</Filter>
+    </ClCompile>
+    <ClCompile Include="WelcomeDlg.cpp">
+      <Filter>Source Files\Dialogs\Welcome, splash, tips</Filter>
+    </ClCompile>
+    <ClCompile Include="AddExitDlg.cpp">
+      <Filter>Source Files\Dialogs\Adding</Filter>
+    </ClCompile>
+    <ClCompile Include="AddToObjectDlg.cpp">
+      <Filter>Source Files\Dialogs\Adding</Filter>
+    </ClCompile>
+    <ClCompile Include="AddToRoomDlg.cpp">
+      <Filter>Source Files\Dialogs\Adding</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandsListDlg.cpp">
+      <Filter>Source Files\Dialogs\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="EditCommandDlg.cpp">
+      <Filter>Source Files\Dialogs\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaLoadingProblems.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaSummary.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaTypeDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CreditsDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteXrefDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="FindInDialogDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="FlagsListPage.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="GotoVnumDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="NeighbourNameDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="RenumberDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkthroughDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WearFlagsDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Affect.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Area.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Exit.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraDescription.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Help.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mobile.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="MUDitem.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="MUDObject.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="MUDprogram.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Repair.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Reset.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomMap.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillAffect.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Social.cpp">
+      <Filter>Source Files\Subtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckCommandSyntax.cpp">
+      <Filter>Source Files\Commands_Skills_Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands.cpp">
+      <Filter>Source Files\Commands_Skills_Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills.cpp">
+      <Filter>Source Files\Commands_Skills_Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="Socials.cpp">
+      <Filter>Source Files\Commands_Skills_Socials</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEditorDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEditorView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaRenumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="const.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedNameDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MUSHexport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NameGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Printing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AreaEditor.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddToObjectDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddToRoomDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaClimateView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaEditorDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaEditorView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaFlagsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaLoadingProblems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaNameView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaNeighbourView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaRangesView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaSummary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaTypeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaVnumsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthorNameView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlankView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseExitDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseFlagsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseFromListDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseMobDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseObjectDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseRoomDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseSpellDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandsListDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultLists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defaults.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteXrefDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditAffectDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditCommandDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditSocialDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindInDialogDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlagsListPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralFlagsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedNameDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GotoVnumDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileActionsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileAffectPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileAttacksPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileBodyPartsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileDefensesPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileNamePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileResetsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileResistantPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileSpeaksPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileStatsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileSummaryPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MUDProgramView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NeighbourNameDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectAffectView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectExtraDescriptionView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectExtraFlagsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectNamePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectResetsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStatsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectSummaryPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsP1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsP2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsP3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsP4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RenumberDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RepairView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResetView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomExitDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomExitView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomFlagsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomMapView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomNamePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomSummaryPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillsListDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillsPages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillsSheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SocialsListDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TipDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkthroughDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WearFlagsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Welcome1Dlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WelcomeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AreaEditor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AreaEditorDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\litebulb.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="logo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Splsh16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="configuration.txt" />
+    <Text Include="res\credits.txt" />
+    <Text Include="res\license.txt" />
+    <Text Include="mushexport.txt" />
+    <Text Include="ReadMe.txt" />
+    <Text Include="tips.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\AreaEditor.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AreaEditor.reg" />
+    <CustomBuild Include="config.dat" />
+  </ItemGroup>
+</Project>
